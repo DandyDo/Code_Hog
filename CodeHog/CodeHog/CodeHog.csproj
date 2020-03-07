@@ -45,6 +45,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,14 +58,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodeHogDatabaseModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CodeHogDatabaseModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CodeHogDatabaseModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CodeHogDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CodeHogDatabaseModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CodeHogDatabaseModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Dependency.cs">
+      <DependentUpon>CodeHogDatabaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Note.cs">
+      <DependentUpon>CodeHogDatabaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ticket.cs">
+      <DependentUpon>CodeHogDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>CodeHogDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User_Roles.cs">
+      <DependentUpon>CodeHogDatabaseModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -73,6 +105,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="CodeHogDatabaseModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CodeHogDatabaseModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CodeHogDatabaseModel.edmx.diagram">
+      <DependentUpon>CodeHogDatabaseModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -88,7 +127,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SQL Database Script.txt" />
+    <Content Include="CodeHogDatabaseModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CodeHogDatabaseModel.edmx</DependentUpon>
+      <LastGenOutput>CodeHogDatabaseModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CodeHogDatabaseModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CodeHogDatabaseModel.edmx</DependentUpon>
+      <LastGenOutput>CodeHogDatabaseModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="SQL TABLE QUEREYS.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
