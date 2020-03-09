@@ -7,19 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CodeHog
+namespace Code_Hog
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Note
+    public partial class Dependency
     {
-        public int NoteID { get; set; }
+        public int DependencyID { get; set; }
         public int TicketID { get; set; }
-        public int UserID { get; set; }
-        public string Note1 { get; set; }
+        public int DependentTicketID { get; set; }
     
         public virtual Ticket Ticket { get; set; }
-        public virtual User User { get; set; }
+        public virtual Ticket Ticket1 { get; set; }
     }
 }

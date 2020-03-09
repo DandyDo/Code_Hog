@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CodeHog.Properties {
+namespace Code_Hog.Properties {
 
 
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
