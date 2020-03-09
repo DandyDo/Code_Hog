@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CodeHog {
-    public partial class Menus : Form {
-        public Menus() {
+    public partial class UserProfiles : Form {
+        public UserProfiles() {
             InitializeComponent();
         }
     }
