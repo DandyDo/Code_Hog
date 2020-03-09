@@ -5,10 +5,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{14D3FA8D-9737-4464-86DD-891C14852017}</ProjectGuid>
+    <ProjectGuid>{AAD20C49-7316-4513-BC12-F9C8D1F695DC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CodeHog</RootNamespace>
-    <AssemblyName>CodeHog</AssemblyName>
+    <RootNamespace>Code_Hog</RootNamespace>
+    <AssemblyName>Code_Hog</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -58,44 +58,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CodeHogDatabaseModel.Context.cs">
+    <Compile Include="CodeHogModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CodeHogDatabaseModel.Context.tt</DependentUpon>
+      <DependentUpon>CodeHogModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="CodeHogDatabaseModel.cs">
+    <Compile Include="CodeHogModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CodeHogDatabaseModel.tt</DependentUpon>
+      <DependentUpon>CodeHogModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CodeHogDatabaseModel.Designer.cs">
+    <Compile Include="CodeHogModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CodeHogDatabaseModel.edmx</DependentUpon>
+      <DependentUpon>CodeHogModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Dependency.cs">
-      <DependentUpon>CodeHogDatabaseModel.tt</DependentUpon>
+      <DependentUpon>CodeHogModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Menus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Menus.Designer.cs">
+      <DependentUpon>Menus.cs</DependentUpon>
     </Compile>
     <Compile Include="Note.cs">
-      <DependentUpon>CodeHogDatabaseModel.tt</DependentUpon>
+      <DependentUpon>CodeHogModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ticket.cs">
-      <DependentUpon>CodeHogDatabaseModel.tt</DependentUpon>
+      <DependentUpon>CodeHogModel.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>CodeHogDatabaseModel.tt</DependentUpon>
+      <DependentUpon>CodeHogModel.tt</DependentUpon>
     </Compile>
     <Compile Include="User_Roles.cs">
-      <DependentUpon>CodeHogDatabaseModel.tt</DependentUpon>
+      <DependentUpon>CodeHogModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Menus.resx">
+      <DependentUpon>Menus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -105,12 +108,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="CodeHogDatabaseModel.edmx">
+    <EntityDeploy Include="CodeHogModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CodeHogDatabaseModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>CodeHogModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="CodeHogDatabaseModel.edmx.diagram">
-      <DependentUpon>CodeHogDatabaseModel.edmx</DependentUpon>
+    <None Include="CodeHogModel.edmx.diagram">
+      <DependentUpon>CodeHogModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -127,17 +130,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CodeHogDatabaseModel.Context.tt">
+    <Content Include="CodeHogModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CodeHogDatabaseModel.edmx</DependentUpon>
-      <LastGenOutput>CodeHogDatabaseModel.Context.cs</LastGenOutput>
+      <DependentUpon>CodeHogModel.edmx</DependentUpon>
+      <LastGenOutput>CodeHogModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="CodeHogDatabaseModel.tt">
+    <Content Include="CodeHogModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CodeHogDatabaseModel.edmx</DependentUpon>
-      <LastGenOutput>CodeHogDatabaseModel.cs</LastGenOutput>
+      <DependentUpon>CodeHogModel.edmx</DependentUpon>
+      <LastGenOutput>CodeHogModel.cs</LastGenOutput>
     </Content>
-    <Content Include="SQL TABLE QUEREYS.txt" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

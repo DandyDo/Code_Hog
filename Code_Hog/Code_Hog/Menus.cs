@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CodeHog {
+namespace Code_Hog {
     public partial class Menus : Form {
         public Menus() {
             InitializeComponent();
