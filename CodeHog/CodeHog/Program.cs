@@ -13,7 +13,7 @@ namespace CodeHog {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TicketMenu());
+            Application.Run(new Menus());
         }
     }
 }
