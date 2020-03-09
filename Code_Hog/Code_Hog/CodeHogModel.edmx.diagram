@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3ef41ddb9398452e9d8db3bcb266bb89" Name="Diagram1">
+      <Diagram DiagramId="788dc6e48de84521a52015e6f1919b15" Name="Diagram1">
         <EntityTypeShape EntityType="CodeHogModel.Dependency" Width="1.5" PointX="7.5" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CodeHogModel.Note" Width="1.5" PointX="7.625" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="CodeHogModel.Note" Width="1.5" PointX="7.5" PointY="2.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CodeHogModel.Ticket" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="CodeHogModel.User_Roles" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CodeHogModel.User" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CodeHogModel.User" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
         <AssociationConnector Association="CodeHogModel.FK_Dependencies_ToTicketsForDependenciesOnTicket" ManuallyRouted="false" />
         <AssociationConnector Association="CodeHogModel.FK_Dependencies_ToTicketsForTicket" ManuallyRouted="false" />
         <AssociationConnector Association="CodeHogModel.FK_Notes_ToTickets" ManuallyRouted="false" />
