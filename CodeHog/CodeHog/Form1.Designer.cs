@@ -1,5 +1,5 @@
 ﻿namespace CodeHog {
-    partial class TicketMenu {
+    partial class Form1 {
         /// <summary>
         /// Required designer variable.
         /// </summary>
