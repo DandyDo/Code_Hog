@@ -24,9 +24,10 @@ namespace Code_Hog
         }
 
         //Create new ticket in DB
+        //Recieves the priority, name, initial reportor of, and the description of the new ticket
         public void CreateTicket(int inPriority, string inName, string repName, string inDesc)
         {
-            data newTicket;
+            data newTicket; //holder for information being placed in the new ticket
 
             //get next available ticket #
             //TODO
@@ -52,7 +53,47 @@ namespace Code_Hog
         }
 
         //Edit existing Ticket in DB
+        //Recieves ticket number, current contributor name, and changed info
+        void UpdateTicketInfo(int number, int newPriority, int newStatus, string newContributor, string newDependancies, string newNote)
+        {
+            data updateTicket; //holder for information in the ticket that is being edited
+
+            //get ticket information from DB based on input ticket number
+            updateTicket = GetTicketInfo(number);
+
+            //updatePriority
+            updateTicket.priority = newPriority;
+
+            //updateStatus
+            updateTicket.status = newStatus;
+
+            //check if the contributor is already on the list of past contribuotrs
+            //add New Contributor to list if they are not on it already
+
+            //update dependancies
+            updateTicket.dependancies = newDependancies;
+
+            //add new note to list of notes
+            //TODO
+
+            //update the ticket's entry in the DB with new data
+            //TODO
+
+        }
 
         //get specified ticket information from DB
+        //takes ticket number as input
+        //returns a data struct filled with information from the ticket's entry in the DB
+        data GetTicketInfo(int number)
+        {
+            data returnVal;
+
+            //get ticket data from DB, and assign to returnVal
+            //TODO
+
+            return returnVal;
+
+        }
+
     }
 }
