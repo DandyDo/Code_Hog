@@ -54,7 +54,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -99,7 +99,7 @@
             this.TicketsPage.Controls.Add(this.button2);
             this.TicketsPage.Controls.Add(this.textBox3);
             this.TicketsPage.Controls.Add(this.textBox2);
-            this.TicketsPage.Controls.Add(this.textBox1);
+            this.TicketsPage.Controls.Add(this.nameTextBox);
             this.TicketsPage.Controls.Add(this.comboBox2);
             this.TicketsPage.Controls.Add(this.comboBox1);
             this.TicketsPage.Controls.Add(this.label13);
@@ -290,7 +290,6 @@
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(74, 24);
             this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Priority";
             this.toolTip2.SetToolTip(this.radioButton2, "Sort Tickets in Decending Order \r\nby Priority Level (Highest Priority First)");
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -377,12 +376,12 @@
             this.comboBox2.Size = new System.Drawing.Size(44, 28);
             this.comboBox2.TabIndex = 19;
             // 
-            // textBox1
+            // nameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(702, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(525, 26);
-            this.textBox1.TabIndex = 20;
+            this.nameTextBox.Location = new System.Drawing.Point(702, 66);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(525, 26);
+            this.nameTextBox.TabIndex = 20;
             // 
             // textBox2
             // 
@@ -529,7 +528,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolTip toolTip1;
