@@ -63,6 +63,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CodeHogDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CodeHogDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CodeHogDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CodeHogModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -136,6 +141,17 @@
     </None>
     <None Include="CodeHogDataSet.xss">
       <DependentUpon>CodeHogDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CodeHogDataSet1.xsc">
+      <DependentUpon>CodeHogDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CodeHogDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CodeHogDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CodeHogDataSet1.xss">
+      <DependentUpon>CodeHogDataSet1.xsd</DependentUpon>
     </None>
     <None Include="CodeHogModel.edmx.diagram">
       <DependentUpon>CodeHogModel.edmx</DependentUpon>
