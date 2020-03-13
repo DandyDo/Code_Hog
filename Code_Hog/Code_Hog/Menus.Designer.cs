@@ -383,7 +383,7 @@
             this.archiveCheckBox.TabIndex = 1;
             this.archiveCheckBox.Text = "Archive";
             this.archiveCheckBox.UseVisualStyleBackColor = true;
-            this.archiveCheckBox.CheckedChanged += new System.EventHandler(this.FilterDataGrid);
+            this.archiveCheckBox.CheckedChanged += new System.EventHandler(this.FilterDataGridChange);
             // 
             // activeCheckBox
             // 
@@ -396,7 +396,7 @@
             this.activeCheckBox.TabIndex = 0;
             this.activeCheckBox.Text = "Active";
             this.activeCheckBox.UseVisualStyleBackColor = true;
-            this.activeCheckBox.CheckedChanged += new System.EventHandler(this.FilterDataGrid);
+            this.activeCheckBox.CheckedChanged += new System.EventHandler(this.FilterDataGridChange);
             // 
             // UserManagementPage
             // 

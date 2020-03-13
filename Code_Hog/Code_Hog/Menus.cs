@@ -77,9 +77,14 @@ namespace Code_Hog {
             }
         }
 
-        private void FilterDataGrid(object sender, EventArgs e) {
+        private void FilterDataGridChange(object sender, EventArgs e) {
 
-            if (archiveCheckBox.Checked && activeCheckBox.Checked == false) {
+            ApplyFilterToDataGrid();
+        }
+
+        private void ApplyFilterToDataGrid() {
+
+            if (archiveCheckBox.Checked && (activeCheckBox.Checked == false)) {
 
                 ticketDataGridView.DataSource = codeHogEntities.Tickets.Where(x => x.TicketArchiveStatus).ToList();
             }
