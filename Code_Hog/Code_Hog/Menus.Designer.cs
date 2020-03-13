@@ -24,8 +24,16 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.menuTabControl = new System.Windows.Forms.TabControl();
             this.TicketsPage = new System.Windows.Forms.TabPage();
+            this.addNoteButton = new System.Windows.Forms.Button();
+            this.noteTextBox = new System.Windows.Forms.TextBox();
+            this.descriptionTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.statusComboBox = new System.Windows.Forms.ComboBox();
+            this.priorityComboBox = new System.Windows.Forms.ComboBox();
+            this.reporterNameLabel = new System.Windows.Forms.Label();
+            this.ticketIDLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -41,69 +49,59 @@
             this.ticketsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.codeHogDataSet = new Code_Hog.CodeHogDataSet();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.createNewTicketButton = new System.Windows.Forms.Button();
+            this.ticketRadioButton = new System.Windows.Forms.RadioButton();
+            this.priorityRadioButton = new System.Windows.Forms.RadioButton();
+            this.archiveCheckBox = new System.Windows.Forms.CheckBox();
+            this.activeCheckBox = new System.Windows.Forms.CheckBox();
             this.UserManagementPage = new System.Windows.Forms.TabPage();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.codeHogDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.codeHogDataSet1 = new Code_Hog.CodeHogDataSet1();
             this.ticketsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ticketsTableAdapter = new Code_Hog.CodeHogDataSetTableAdapters.TicketsTableAdapter();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label10 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.codeHogDataSet1 = new Code_Hog.CodeHogDataSet1();
-            this.codeHogDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.userRolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.user_RolesTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.User_RolesTableAdapter();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.UsersTableAdapter();
-            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabControl1.SuspendLayout();
+            this.changeDependenciesButton = new System.Windows.Forms.Button();
+            this.dependenciesLabel = new System.Windows.Forms.Label();
+            this.menuTabControl.SuspendLayout();
             this.TicketsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet)).BeginInit();
-            this.UserManagementPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userRolesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userRolesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // menuTabControl
             // 
-            this.tabControl1.Controls.Add(this.TicketsPage);
-            this.tabControl1.Controls.Add(this.UserManagementPage);
-            this.tabControl1.Location = new System.Drawing.Point(13, 13);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1241, 713);
-            this.tabControl1.TabIndex = 0;
+            this.menuTabControl.Controls.Add(this.TicketsPage);
+            this.menuTabControl.Controls.Add(this.UserManagementPage);
+            this.menuTabControl.Location = new System.Drawing.Point(13, 13);
+            this.menuTabControl.Name = "menuTabControl";
+            this.menuTabControl.SelectedIndex = 0;
+            this.menuTabControl.Size = new System.Drawing.Size(1241, 713);
+            this.menuTabControl.TabIndex = 0;
             // 
             // TicketsPage
             // 
-            this.TicketsPage.Controls.Add(this.button2);
-            this.TicketsPage.Controls.Add(this.textBox3);
-            this.TicketsPage.Controls.Add(this.textBox2);
+            this.TicketsPage.Controls.Add(this.dependenciesLabel);
+            this.TicketsPage.Controls.Add(this.changeDependenciesButton);
+            this.TicketsPage.Controls.Add(this.addNoteButton);
+            this.TicketsPage.Controls.Add(this.noteTextBox);
+            this.TicketsPage.Controls.Add(this.descriptionTextBox);
             this.TicketsPage.Controls.Add(this.nameTextBox);
-            this.TicketsPage.Controls.Add(this.comboBox2);
-            this.TicketsPage.Controls.Add(this.comboBox1);
-            this.TicketsPage.Controls.Add(this.label13);
-            this.TicketsPage.Controls.Add(this.label10);
+            this.TicketsPage.Controls.Add(this.statusComboBox);
+            this.TicketsPage.Controls.Add(this.priorityComboBox);
+            this.TicketsPage.Controls.Add(this.reporterNameLabel);
+            this.TicketsPage.Controls.Add(this.ticketIDLabel);
             this.TicketsPage.Controls.Add(this.label9);
             this.TicketsPage.Controls.Add(this.label8);
             this.TicketsPage.Controls.Add(this.label7);
@@ -114,11 +112,11 @@
             this.TicketsPage.Controls.Add(this.label2);
             this.TicketsPage.Controls.Add(this.dataGridView1);
             this.TicketsPage.Controls.Add(this.label1);
-            this.TicketsPage.Controls.Add(this.button1);
-            this.TicketsPage.Controls.Add(this.radioButton1);
-            this.TicketsPage.Controls.Add(this.radioButton2);
-            this.TicketsPage.Controls.Add(this.checkBox2);
-            this.TicketsPage.Controls.Add(this.checkBox1);
+            this.TicketsPage.Controls.Add(this.createNewTicketButton);
+            this.TicketsPage.Controls.Add(this.ticketRadioButton);
+            this.TicketsPage.Controls.Add(this.priorityRadioButton);
+            this.TicketsPage.Controls.Add(this.archiveCheckBox);
+            this.TicketsPage.Controls.Add(this.activeCheckBox);
             this.TicketsPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TicketsPage.Location = new System.Drawing.Point(4, 22);
             this.TicketsPage.Name = "TicketsPage";
@@ -127,6 +125,75 @@
             this.TicketsPage.TabIndex = 0;
             this.TicketsPage.Text = "Tickets";
             this.TicketsPage.UseVisualStyleBackColor = true;
+            // 
+            // addNoteButton
+            // 
+            this.addNoteButton.Location = new System.Drawing.Point(1143, 471);
+            this.addNoteButton.Name = "addNoteButton";
+            this.addNoteButton.Size = new System.Drawing.Size(84, 27);
+            this.addNoteButton.TabIndex = 23;
+            this.addNoteButton.Text = "Add Note";
+            this.addNoteButton.UseVisualStyleBackColor = true;
+            // 
+            // noteTextBox
+            // 
+            this.noteTextBox.Location = new System.Drawing.Point(646, 501);
+            this.noteTextBox.Multiline = true;
+            this.noteTextBox.Name = "noteTextBox";
+            this.noteTextBox.ReadOnly = true;
+            this.noteTextBox.Size = new System.Drawing.Size(581, 180);
+            this.noteTextBox.TabIndex = 22;
+            // 
+            // descriptionTextBox
+            // 
+            this.descriptionTextBox.Location = new System.Drawing.Point(645, 138);
+            this.descriptionTextBox.Multiline = true;
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.ReadOnly = true;
+            this.descriptionTextBox.Size = new System.Drawing.Size(582, 330);
+            this.descriptionTextBox.TabIndex = 21;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Location = new System.Drawing.Point(702, 83);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.ReadOnly = true;
+            this.nameTextBox.Size = new System.Drawing.Size(525, 26);
+            this.nameTextBox.TabIndex = 20;
+            // 
+            // statusComboBox
+            // 
+            this.statusComboBox.FormattingEnabled = true;
+            this.statusComboBox.Location = new System.Drawing.Point(917, 12);
+            this.statusComboBox.Name = "statusComboBox";
+            this.statusComboBox.Size = new System.Drawing.Size(44, 28);
+            this.statusComboBox.TabIndex = 19;
+            // 
+            // priorityComboBox
+            // 
+            this.priorityComboBox.FormattingEnabled = true;
+            this.priorityComboBox.Location = new System.Drawing.Point(810, 12);
+            this.priorityComboBox.Name = "priorityComboBox";
+            this.priorityComboBox.Size = new System.Drawing.Size(44, 28);
+            this.priorityComboBox.TabIndex = 18;
+            // 
+            // reporterNameLabel
+            // 
+            this.reporterNameLabel.AutoSize = true;
+            this.reporterNameLabel.Location = new System.Drawing.Point(1072, 15);
+            this.reporterNameLabel.Name = "reporterNameLabel";
+            this.reporterNameLabel.Size = new System.Drawing.Size(17, 20);
+            this.reporterNameLabel.TabIndex = 17;
+            this.reporterNameLabel.Text = "..";
+            // 
+            // ticketIDLabel
+            // 
+            this.ticketIDLabel.AutoSize = true;
+            this.ticketIDLabel.Location = new System.Drawing.Point(714, 15);
+            this.ticketIDLabel.Name = "ticketIDLabel";
+            this.ticketIDLabel.Size = new System.Drawing.Size(17, 20);
+            this.ticketIDLabel.TabIndex = 14;
+            this.ticketIDLabel.Text = "..";
             // 
             // label9
             // 
@@ -141,7 +208,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(641, 43);
+            this.label8.Location = new System.Drawing.Point(641, 50);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(116, 20);
             this.label8.TabIndex = 12;
@@ -150,7 +217,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(642, 95);
+            this.label7.Location = new System.Drawing.Point(642, 115);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 20);
             this.label7.TabIndex = 11;
@@ -178,7 +245,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(641, 69);
+            this.label4.Location = new System.Drawing.Point(641, 86);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 20);
             this.label4.TabIndex = 8;
@@ -214,6 +281,7 @@
             this.dataGridView1.DataSource = this.ticketsBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(10, 69);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(624, 612);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -261,64 +329,63 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Sort by:";
             // 
-            // button1
+            // createNewTicketButton
             // 
-            this.button1.Location = new System.Drawing.Point(461, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 26);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Create New Ticket";
-            this.button1.UseVisualStyleBackColor = true;
+            this.createNewTicketButton.Location = new System.Drawing.Point(461, 15);
+            this.createNewTicketButton.Name = "createNewTicketButton";
+            this.createNewTicketButton.Size = new System.Drawing.Size(173, 26);
+            this.createNewTicketButton.TabIndex = 3;
+            this.createNewTicketButton.Text = "Create New Ticket";
+            this.createNewTicketButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // ticketRadioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(75, 8);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(69, 24);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Ticket";
-            this.toolTip1.SetToolTip(this.radioButton1, "Sort Tickets in Decending Order by Number\r\n");
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.ticketRadioButton.AutoSize = true;
+            this.ticketRadioButton.Checked = true;
+            this.ticketRadioButton.Location = new System.Drawing.Point(75, 8);
+            this.ticketRadioButton.Name = "ticketRadioButton";
+            this.ticketRadioButton.Size = new System.Drawing.Size(69, 24);
+            this.ticketRadioButton.TabIndex = 1;
+            this.ticketRadioButton.TabStop = true;
+            this.ticketRadioButton.Text = "Ticket";
+            this.toolTip1.SetToolTip(this.ticketRadioButton, "Sort Tickets in Decending Order by Number\r\n");
+            this.ticketRadioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // priorityRadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(75, 38);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(74, 24);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.Text = "Priority";
-            this.toolTip2.SetToolTip(this.radioButton2, "Sort Tickets in Decending Order \r\nby Priority Level (Highest Priority First)");
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.priorityRadioButton.AutoSize = true;
+            this.priorityRadioButton.Location = new System.Drawing.Point(75, 38);
+            this.priorityRadioButton.Name = "priorityRadioButton";
+            this.priorityRadioButton.Size = new System.Drawing.Size(74, 24);
+            this.priorityRadioButton.TabIndex = 2;
+            this.priorityRadioButton.Text = "Priority";
+            this.toolTip2.SetToolTip(this.priorityRadioButton, "Sort Tickets in Decending Order \r\nby Priority Level (Highest Priority First)");
+            this.priorityRadioButton.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // archiveCheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(255, 39);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 24);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Archive";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.archiveCheckBox.AutoSize = true;
+            this.archiveCheckBox.Location = new System.Drawing.Point(255, 39);
+            this.archiveCheckBox.Name = "archiveCheckBox";
+            this.archiveCheckBox.Size = new System.Drawing.Size(80, 24);
+            this.archiveCheckBox.TabIndex = 1;
+            this.archiveCheckBox.Text = "Archive";
+            this.archiveCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // activeCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(255, 9);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(71, 24);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Active";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.activeCheckBox.AutoSize = true;
+            this.activeCheckBox.Checked = true;
+            this.activeCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.activeCheckBox.Location = new System.Drawing.Point(255, 9);
+            this.activeCheckBox.Name = "activeCheckBox";
+            this.activeCheckBox.Size = new System.Drawing.Size(71, 24);
+            this.activeCheckBox.TabIndex = 0;
+            this.activeCheckBox.Text = "Active";
+            this.activeCheckBox.UseVisualStyleBackColor = true;
             // 
             // UserManagementPage
             // 
-            this.UserManagementPage.Controls.Add(this.dataGridView2);
             this.UserManagementPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserManagementPage.Location = new System.Drawing.Point(4, 22);
             this.UserManagementPage.Name = "UserManagementPage";
@@ -327,6 +394,21 @@
             this.UserManagementPage.TabIndex = 1;
             this.UserManagementPage.Text = "User Management";
             this.UserManagementPage.UseVisualStyleBackColor = true;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.codeHogDataSet1BindingSource;
+            // 
+            // codeHogDataSet1BindingSource
+            // 
+            this.codeHogDataSet1BindingSource.DataSource = this.codeHogDataSet1;
+            this.codeHogDataSet1BindingSource.Position = 0;
+            // 
+            // codeHogDataSet1
+            // 
+            this.codeHogDataSet1.DataSetName = "CodeHogDataSet1";
+            this.codeHogDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ticketsBindingSource
             // 
@@ -342,96 +424,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(714, 15);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(17, 20);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "..";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(1072, 15);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(17, 20);
-            this.label13.TabIndex = 17;
-            this.label13.Text = "..";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(810, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(44, 28);
-            this.comboBox1.TabIndex = 18;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(917, 12);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(44, 28);
-            this.comboBox2.TabIndex = 19;
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.Location = new System.Drawing.Point(702, 66);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(525, 26);
-            this.nameTextBox.TabIndex = 20;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(645, 118);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(582, 350);
-            this.textBox2.TabIndex = 21;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(646, 501);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(581, 180);
-            this.textBox3.TabIndex = 22;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(1143, 471);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 27);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Add Note";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // codeHogDataSet1
-            // 
-            this.codeHogDataSet1.DataSetName = "CodeHogDataSet1";
-            this.codeHogDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // codeHogDataSet1BindingSource
-            // 
-            this.codeHogDataSet1BindingSource.DataSource = this.codeHogDataSet1;
-            this.codeHogDataSet1BindingSource.Position = 0;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.userIDDataGridViewTextBoxColumn,
-            this.usernameDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.usersBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 6);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(490, 150);
-            this.dataGridView2.TabIndex = 0;
-            // 
             // userRolesBindingSource
             // 
             this.userRolesBindingSource.DataMember = "User_Roles";
@@ -441,70 +433,63 @@
             // 
             this.user_RolesTableAdapter.ClearBeforeFill = true;
             // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.codeHogDataSet1BindingSource;
-            // 
             // usersTableAdapter
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // userIDDataGridViewTextBoxColumn
+            // changeDependenciesButton
             // 
-            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
-            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            this.changeDependenciesButton.Location = new System.Drawing.Point(1045, 43);
+            this.changeDependenciesButton.Name = "changeDependenciesButton";
+            this.changeDependenciesButton.Size = new System.Drawing.Size(182, 34);
+            this.changeDependenciesButton.TabIndex = 24;
+            this.changeDependenciesButton.Text = "Change Dependencies";
+            this.changeDependenciesButton.UseVisualStyleBackColor = true;
             // 
-            // usernameDataGridViewTextBoxColumn
+            // dependenciesLabel
             // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.dependenciesLabel.AutoSize = true;
+            this.dependenciesLabel.Location = new System.Drawing.Point(763, 50);
+            this.dependenciesLabel.Name = "dependenciesLabel";
+            this.dependenciesLabel.Size = new System.Drawing.Size(17, 20);
+            this.dependenciesLabel.TabIndex = 1;
+            this.dependenciesLabel.Text = "..";
             // 
             // Menus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1266, 738);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.menuTabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Menus";
             this.Text = "Code Hog";
             this.Load += new System.EventHandler(this.Menus_Load);
-            this.tabControl1.ResumeLayout(false);
+            this.menuTabControl.ResumeLayout(false);
             this.TicketsPage.ResumeLayout(false);
             this.TicketsPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet)).EndInit();
-            this.UserManagementPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userRolesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userRolesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl menuTabControl;
         private System.Windows.Forms.TabPage TicketsPage;
         private System.Windows.Forms.TabPage UserManagementPage;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.CheckBox archiveCheckBox;
+        private System.Windows.Forms.CheckBox activeCheckBox;
+        private System.Windows.Forms.Button createNewTicketButton;
+        private System.Windows.Forms.RadioButton ticketRadioButton;
+        private System.Windows.Forms.RadioButton priorityRadioButton;
         private System.Windows.Forms.Label label1;
         private CodeHogDataSet codeHogDataSet;
         private System.Windows.Forms.BindingSource ticketsBindingSource;
@@ -523,26 +508,24 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label ticketIDLabel;
+        private System.Windows.Forms.ComboBox statusComboBox;
+        private System.Windows.Forms.ComboBox priorityComboBox;
+        private System.Windows.Forms.Label reporterNameLabel;
+        private System.Windows.Forms.TextBox descriptionTextBox;
         private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox noteTextBox;
+        private System.Windows.Forms.Button addNoteButton;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolTip toolTip2;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource codeHogDataSet1BindingSource;
         private CodeHogDataSet1 codeHogDataSet1;
         private System.Windows.Forms.BindingSource userRolesBindingSource;
         private CodeHogDataSet1TableAdapters.User_RolesTableAdapter user_RolesTableAdapter;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private CodeHogDataSet1TableAdapters.UsersTableAdapter usersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label dependenciesLabel;
+        private System.Windows.Forms.Button changeDependenciesButton;
     }
 }
 
