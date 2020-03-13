@@ -86,6 +86,20 @@ namespace Code_Hog {
             }
         }
 
+        private void SortTicketGrid(object sender, EventArgs e) {
+
+            if (CurrentSort == Convert.ToBoolean(ChosenSort.TicketSort)) {
+
+                ticketDataGridView.Sort(ticketDataGridView.Columns[1], ListSortDirection.Ascending);
+                CurrentSort = Convert.ToBoolean(ChosenSort.PrioritySort);
+            }
+            else if (CurrentSort == Convert.ToBoolean(ChosenSort.PrioritySort)) {
+
+                ticketDataGridView.Sort(ticketDataGridView.Columns[0], ListSortDirection.Ascending);
+                CurrentSort = Convert.ToBoolean(ChosenSort.TicketSort);
+            }
+        }
+
         private void CreateNewTicketButton_Click(object sender, EventArgs e) {
 
         }
@@ -95,12 +109,6 @@ namespace Code_Hog {
         }
 
         private void AddNoteButton_Click(object sender, EventArgs e) {
-
-        }
-
-        private void SortTicketGrid(object sender, EventArgs e) {
-
-
 
         }
     }
