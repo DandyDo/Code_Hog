@@ -12,10 +12,18 @@ namespace Code_Hog {
     public partial class Menus : Form {
 
         CodeHogEntities codeHogEntities;
+        public bool CurrentSort { get; private set; }
+
+        enum ChosenSort {
+
+            TicketSort = 0,
+            PrioritySort = 1
+        }
 
         public Menus() {
             InitializeComponent();
             codeHogEntities = new CodeHogEntities();
+            CurrentSort = Convert.ToBoolean(ChosenSort.TicketSort);
         }
 
         private void Menus_Load(object sender, EventArgs e) {
@@ -77,6 +85,16 @@ namespace Code_Hog {
         }
 
         private void AddNoteButton_Click(object sender, EventArgs e) {
+
+        }
+
+        private void SortTicketGrid(object sender, EventArgs e) {
+
+
+
+        }
+
+        private void label9_Click(object sender, EventArgs e) {
 
         }
     }
