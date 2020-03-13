@@ -24,7 +24,7 @@ namespace Code_Hog {
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+        private void ticketDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) {
 
         }
 

@@ -284,7 +284,7 @@
             this.ticketDataGridView.ReadOnly = true;
             this.ticketDataGridView.Size = new System.Drawing.Size(624, 612);
             this.ticketDataGridView.TabIndex = 5;
-            this.ticketDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.ticketDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ticketDataGridView_CellContentClick);
             // 
             // ticketIDDataGridViewTextBoxColumn
             // 
