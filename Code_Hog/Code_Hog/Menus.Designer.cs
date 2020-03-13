@@ -318,7 +318,6 @@
             this.ticketDataGridView.Location = new System.Drawing.Point(10, 69);
             this.ticketDataGridView.Name = "ticketDataGridView";
             this.ticketDataGridView.ReadOnly = true;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ticketDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.ticketDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.ticketDataGridView.Size = new System.Drawing.Size(640, 612);
