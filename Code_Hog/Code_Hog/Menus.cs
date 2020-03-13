@@ -31,7 +31,12 @@ namespace Code_Hog {
         private void TicketDataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
 
             int TicketId = Convert.ToInt32(ticketDataGridView[1, e.RowIndex]);
-            foreach(var ticket in codeHogEntities.Tickets) {
+            PrintTicketToLabelsAndTextBoxes(TicketId);
+        }
+
+        private void PrintTicketToLabelsAndTextBoxes(int TicketId) {
+
+            foreach (var ticket in codeHogEntities.Tickets) {
 
                 if (ticket.TicketID == TicketId) {
 
@@ -39,19 +44,24 @@ namespace Code_Hog {
                     priorityLabel.Text = ticket.TicketPriority.ToString();
                     statusLabel.Text = ticket.TicketStatus.ToString();
 
-                    foreach(var user in codeHogEntities.Users) {
+                    foreach (var user in codeHogEntities.Users) {
 
                         if (user.UserID == ticket.TicketReporter) {
+
                             reporterNameLabel.Text = user.Username;
                             break;
                         }
                     }
 
+                    nameTextBox.Text = ticket.TicketName;
                     descriptionTextBox.Text = ticket.TicketDescription;
                     noteTextBox.Text = "";
 
                     foreach (var note in codeHogEntities.Notes) {
+
                         if (note.TicketID == TicketId) {
+
+                            noteTextBox.Text += $"-({note.User})\n{note.Note1}\n";
                         }
                     }
                 }
