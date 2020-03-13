@@ -68,6 +68,7 @@
             this.usersTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.UsersTableAdapter();
             this.priorityLabel = new System.Windows.Forms.Label();
             this.statusLabel = new System.Windows.Forms.Label();
+            this.deleteTicketButton = new System.Windows.Forms.Button();
             this.menuTabControl.SuspendLayout();
             this.TicketsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).BeginInit();
@@ -92,6 +93,7 @@
             // 
             // TicketsPage
             // 
+            this.TicketsPage.Controls.Add(this.deleteTicketButton);
             this.TicketsPage.Controls.Add(this.statusLabel);
             this.TicketsPage.Controls.Add(this.priorityLabel);
             this.TicketsPage.Controls.Add(this.dependenciesLabel);
@@ -137,7 +139,7 @@
             // 
             // editTicketButton
             // 
-            this.editTicketButton.Location = new System.Drawing.Point(1132, 43);
+            this.editTicketButton.Location = new System.Drawing.Point(1131, 77);
             this.editTicketButton.Name = "editTicketButton";
             this.editTicketButton.Size = new System.Drawing.Size(95, 34);
             this.editTicketButton.TabIndex = 24;
@@ -166,16 +168,16 @@
             // 
             // descriptionTextBox
             // 
-            this.descriptionTextBox.Location = new System.Drawing.Point(645, 138);
+            this.descriptionTextBox.Location = new System.Drawing.Point(645, 172);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.ReadOnly = true;
-            this.descriptionTextBox.Size = new System.Drawing.Size(582, 330);
+            this.descriptionTextBox.Size = new System.Drawing.Size(582, 296);
             this.descriptionTextBox.TabIndex = 21;
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(702, 83);
+            this.nameTextBox.Location = new System.Drawing.Point(701, 117);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.ReadOnly = true;
             this.nameTextBox.Size = new System.Drawing.Size(525, 26);
@@ -220,7 +222,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(642, 115);
+            this.label7.Location = new System.Drawing.Point(642, 149);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 20);
             this.label7.TabIndex = 11;
@@ -247,7 +249,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(641, 86);
+            this.label4.Location = new System.Drawing.Point(640, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 20);
             this.label4.TabIndex = 8;
@@ -457,6 +459,15 @@
             this.statusLabel.TabIndex = 26;
             this.statusLabel.Text = "..";
             // 
+            // deleteTicketButton
+            // 
+            this.deleteTicketButton.Location = new System.Drawing.Point(646, 77);
+            this.deleteTicketButton.Name = "deleteTicketButton";
+            this.deleteTicketButton.Size = new System.Drawing.Size(111, 34);
+            this.deleteTicketButton.TabIndex = 27;
+            this.deleteTicketButton.Text = "Delete Ticket";
+            this.deleteTicketButton.UseVisualStyleBackColor = true;
+            // 
             // Menus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -528,6 +539,7 @@
         private System.Windows.Forms.Button editTicketButton;
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.Label priorityLabel;
+        private System.Windows.Forms.Button deleteTicketButton;
     }
 }
 

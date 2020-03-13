@@ -95,6 +95,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CodeHogModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DeleteTicketMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteTicketMenu.Designer.cs">
+      <DependentUpon>DeleteTicketMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dependency.cs">
       <DependentUpon>CodeHogModel.tt</DependentUpon>
     </Compile>
@@ -103,6 +109,12 @@
     </Compile>
     <Compile Include="CreateTicketMenu.Designer.cs">
       <DependentUpon>CreateTicketMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditTicketMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditTicketMenu.Designer.cs">
+      <DependentUpon>EditTicketMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -124,7 +136,6 @@
     <Compile Include="Ticket.cs">
       <DependentUpon>CodeHogModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TicketControl.cs" />
     <Compile Include="User.cs">
       <DependentUpon>CodeHogModel.tt</DependentUpon>
     </Compile>
