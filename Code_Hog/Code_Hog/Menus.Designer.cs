@@ -26,6 +26,8 @@
             this.components = new System.ComponentModel.Container();
             this.menuTabControl = new System.Windows.Forms.TabControl();
             this.TicketsPage = new System.Windows.Forms.TabPage();
+            this.dependenciesLabel = new System.Windows.Forms.Label();
+            this.editTicketButton = new System.Windows.Forms.Button();
             this.addNoteButton = new System.Windows.Forms.Button();
             this.noteTextBox = new System.Windows.Forms.TextBox();
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
@@ -66,8 +68,6 @@
             this.userRolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.user_RolesTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.User_RolesTableAdapter();
             this.usersTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.UsersTableAdapter();
-            this.changeDependenciesButton = new System.Windows.Forms.Button();
-            this.dependenciesLabel = new System.Windows.Forms.Label();
             this.menuTabControl.SuspendLayout();
             this.TicketsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).BeginInit();
@@ -93,7 +93,7 @@
             // TicketsPage
             // 
             this.TicketsPage.Controls.Add(this.dependenciesLabel);
-            this.TicketsPage.Controls.Add(this.changeDependenciesButton);
+            this.TicketsPage.Controls.Add(this.editTicketButton);
             this.TicketsPage.Controls.Add(this.addNoteButton);
             this.TicketsPage.Controls.Add(this.noteTextBox);
             this.TicketsPage.Controls.Add(this.descriptionTextBox);
@@ -126,6 +126,25 @@
             this.TicketsPage.Text = "Tickets";
             this.TicketsPage.UseVisualStyleBackColor = true;
             // 
+            // dependenciesLabel
+            // 
+            this.dependenciesLabel.AutoSize = true;
+            this.dependenciesLabel.Location = new System.Drawing.Point(763, 50);
+            this.dependenciesLabel.Name = "dependenciesLabel";
+            this.dependenciesLabel.Size = new System.Drawing.Size(17, 20);
+            this.dependenciesLabel.TabIndex = 1;
+            this.dependenciesLabel.Text = "..";
+            // 
+            // editTicketButton
+            // 
+            this.editTicketButton.Location = new System.Drawing.Point(1132, 43);
+            this.editTicketButton.Name = "editTicketButton";
+            this.editTicketButton.Size = new System.Drawing.Size(95, 34);
+            this.editTicketButton.TabIndex = 24;
+            this.editTicketButton.Text = "Edit Ticket";
+            this.editTicketButton.UseVisualStyleBackColor = true;
+            this.editTicketButton.Click += new System.EventHandler(this.EditTicketButton_Click);
+            // 
             // addNoteButton
             // 
             this.addNoteButton.Location = new System.Drawing.Point(1143, 471);
@@ -134,6 +153,7 @@
             this.addNoteButton.TabIndex = 23;
             this.addNoteButton.Text = "Add Note";
             this.addNoteButton.UseVisualStyleBackColor = true;
+            this.addNoteButton.Click += new System.EventHandler(this.AddNoteButton_Click);
             // 
             // noteTextBox
             // 
@@ -203,7 +223,6 @@
             this.label9.Size = new System.Drawing.Size(55, 20);
             this.label9.TabIndex = 13;
             this.label9.Text = "Notes:";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -231,7 +250,6 @@
             this.label6.Size = new System.Drawing.Size(76, 20);
             this.label6.TabIndex = 10;
             this.label6.Text = "Reporter:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -268,7 +286,6 @@
             this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Ticket #:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // ticketDataGridView
             // 
@@ -284,7 +301,7 @@
             this.ticketDataGridView.ReadOnly = true;
             this.ticketDataGridView.Size = new System.Drawing.Size(624, 612);
             this.ticketDataGridView.TabIndex = 5;
-            this.ticketDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ticketDataGridView_CellContentClick);
+            this.ticketDataGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TicketDataGridView_RowHeaderMouseClick);
             // 
             // ticketIDDataGridViewTextBoxColumn
             // 
@@ -337,6 +354,7 @@
             this.createNewTicketButton.TabIndex = 3;
             this.createNewTicketButton.Text = "Create New Ticket";
             this.createNewTicketButton.UseVisualStyleBackColor = true;
+            this.createNewTicketButton.Click += new System.EventHandler(this.CreateNewTicketButton_Click);
             // 
             // ticketRadioButton
             // 
@@ -437,24 +455,6 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // changeDependenciesButton
-            // 
-            this.changeDependenciesButton.Location = new System.Drawing.Point(1045, 43);
-            this.changeDependenciesButton.Name = "changeDependenciesButton";
-            this.changeDependenciesButton.Size = new System.Drawing.Size(182, 34);
-            this.changeDependenciesButton.TabIndex = 24;
-            this.changeDependenciesButton.Text = "Change Dependencies";
-            this.changeDependenciesButton.UseVisualStyleBackColor = true;
-            // 
-            // dependenciesLabel
-            // 
-            this.dependenciesLabel.AutoSize = true;
-            this.dependenciesLabel.Location = new System.Drawing.Point(763, 50);
-            this.dependenciesLabel.Name = "dependenciesLabel";
-            this.dependenciesLabel.Size = new System.Drawing.Size(17, 20);
-            this.dependenciesLabel.TabIndex = 1;
-            this.dependenciesLabel.Text = "..";
-            // 
             // Menus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -525,7 +525,7 @@
         private System.Windows.Forms.BindingSource usersBindingSource;
         private CodeHogDataSet1TableAdapters.UsersTableAdapter usersTableAdapter;
         private System.Windows.Forms.Label dependenciesLabel;
-        private System.Windows.Forms.Button changeDependenciesButton;
+        private System.Windows.Forms.Button editTicketButton;
     }
 }
 

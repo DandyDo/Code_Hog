@@ -24,19 +24,19 @@ namespace Code_Hog {
 
         }
 
-        private void ticketDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+        private void TicketDataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
 
         }
 
-        private void label6_Click(object sender, EventArgs e) {
+        private void CreateNewTicketButton_Click(object sender, EventArgs e) {
 
         }
 
-        private void label2_Click(object sender, EventArgs e) {
+        private void EditTicketButton_Click(object sender, EventArgs e) {
 
         }
 
-        private void label9_Click(object sender, EventArgs e) {
+        private void AddNoteButton_Click(object sender, EventArgs e) {
 
         }
     }
