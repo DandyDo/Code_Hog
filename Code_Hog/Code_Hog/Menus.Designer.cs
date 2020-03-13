@@ -32,8 +32,6 @@
             this.noteTextBox = new System.Windows.Forms.TextBox();
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.statusComboBox = new System.Windows.Forms.ComboBox();
-            this.priorityComboBox = new System.Windows.Forms.ComboBox();
             this.reporterNameLabel = new System.Windows.Forms.Label();
             this.ticketIDLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -68,6 +66,8 @@
             this.userRolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.user_RolesTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.User_RolesTableAdapter();
             this.usersTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.UsersTableAdapter();
+            this.priorityLabel = new System.Windows.Forms.Label();
+            this.statusLabel = new System.Windows.Forms.Label();
             this.menuTabControl.SuspendLayout();
             this.TicketsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).BeginInit();
@@ -92,14 +92,14 @@
             // 
             // TicketsPage
             // 
+            this.TicketsPage.Controls.Add(this.statusLabel);
+            this.TicketsPage.Controls.Add(this.priorityLabel);
             this.TicketsPage.Controls.Add(this.dependenciesLabel);
             this.TicketsPage.Controls.Add(this.editTicketButton);
             this.TicketsPage.Controls.Add(this.addNoteButton);
             this.TicketsPage.Controls.Add(this.noteTextBox);
             this.TicketsPage.Controls.Add(this.descriptionTextBox);
             this.TicketsPage.Controls.Add(this.nameTextBox);
-            this.TicketsPage.Controls.Add(this.statusComboBox);
-            this.TicketsPage.Controls.Add(this.priorityComboBox);
             this.TicketsPage.Controls.Add(this.reporterNameLabel);
             this.TicketsPage.Controls.Add(this.ticketIDLabel);
             this.TicketsPage.Controls.Add(this.label9);
@@ -181,22 +181,6 @@
             this.nameTextBox.Size = new System.Drawing.Size(525, 26);
             this.nameTextBox.TabIndex = 20;
             // 
-            // statusComboBox
-            // 
-            this.statusComboBox.FormattingEnabled = true;
-            this.statusComboBox.Location = new System.Drawing.Point(917, 12);
-            this.statusComboBox.Name = "statusComboBox";
-            this.statusComboBox.Size = new System.Drawing.Size(44, 28);
-            this.statusComboBox.TabIndex = 19;
-            // 
-            // priorityComboBox
-            // 
-            this.priorityComboBox.FormattingEnabled = true;
-            this.priorityComboBox.Location = new System.Drawing.Point(810, 12);
-            this.priorityComboBox.Name = "priorityComboBox";
-            this.priorityComboBox.Size = new System.Drawing.Size(44, 28);
-            this.priorityComboBox.TabIndex = 18;
-            // 
             // reporterNameLabel
             // 
             this.reporterNameLabel.AutoSize = true;
@@ -209,7 +193,7 @@
             // ticketIDLabel
             // 
             this.ticketIDLabel.AutoSize = true;
-            this.ticketIDLabel.Location = new System.Drawing.Point(714, 15);
+            this.ticketIDLabel.Location = new System.Drawing.Point(715, 15);
             this.ticketIDLabel.Name = "ticketIDLabel";
             this.ticketIDLabel.Size = new System.Drawing.Size(17, 20);
             this.ticketIDLabel.TabIndex = 14;
@@ -254,7 +238,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(860, 15);
+            this.label5.Location = new System.Drawing.Point(873, 18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 20);
             this.label5.TabIndex = 9;
@@ -272,7 +256,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(753, 15);
+            this.label3.Location = new System.Drawing.Point(754, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 20);
             this.label3.TabIndex = 7;
@@ -455,6 +439,24 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
+            // priorityLabel
+            // 
+            this.priorityLabel.AutoSize = true;
+            this.priorityLabel.Location = new System.Drawing.Point(820, 15);
+            this.priorityLabel.Name = "priorityLabel";
+            this.priorityLabel.Size = new System.Drawing.Size(17, 20);
+            this.priorityLabel.TabIndex = 25;
+            this.priorityLabel.Text = "..";
+            // 
+            // statusLabel
+            // 
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Location = new System.Drawing.Point(939, 18);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(17, 20);
+            this.statusLabel.TabIndex = 26;
+            this.statusLabel.Text = "..";
+            // 
             // Menus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,8 +511,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label ticketIDLabel;
-        private System.Windows.Forms.ComboBox statusComboBox;
-        private System.Windows.Forms.ComboBox priorityComboBox;
         private System.Windows.Forms.Label reporterNameLabel;
         private System.Windows.Forms.TextBox descriptionTextBox;
         private System.Windows.Forms.TextBox nameTextBox;
@@ -526,6 +526,8 @@
         private CodeHogDataSet1TableAdapters.UsersTableAdapter usersTableAdapter;
         private System.Windows.Forms.Label dependenciesLabel;
         private System.Windows.Forms.Button editTicketButton;
+        private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.Label priorityLabel;
     }
 }
 
