@@ -25,7 +25,6 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuTabControl = new System.Windows.Forms.TabControl();
             this.TicketsPage = new System.Windows.Forms.TabPage();
             this.statusLabel = new System.Windows.Forms.Label();
@@ -296,6 +295,10 @@
             // 
             // ticketDataGridView
             // 
+            this.ticketDataGridView.AllowUserToAddRows = false;
+            this.ticketDataGridView.AllowUserToDeleteRows = false;
+            this.ticketDataGridView.AllowUserToResizeColumns = false;
+            this.ticketDataGridView.AllowUserToResizeRows = false;
             this.ticketDataGridView.AutoGenerateColumns = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -315,8 +318,9 @@
             this.ticketDataGridView.Location = new System.Drawing.Point(10, 69);
             this.ticketDataGridView.Name = "ticketDataGridView";
             this.ticketDataGridView.ReadOnly = true;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ticketDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ticketDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.ticketDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.ticketDataGridView.Size = new System.Drawing.Size(640, 612);
             this.ticketDataGridView.TabIndex = 5;
             this.ticketDataGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TicketDataGridView_RowHeaderMouseClick);
