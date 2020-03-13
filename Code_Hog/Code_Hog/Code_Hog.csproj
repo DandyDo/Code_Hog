@@ -90,6 +90,7 @@
     <Compile Include="Ticket.cs">
       <DependentUpon>CodeHogModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="TicketControl.cs" />
     <Compile Include="User.cs">
       <DependentUpon>CodeHogModel.tt</DependentUpon>
     </Compile>
