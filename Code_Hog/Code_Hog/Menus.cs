@@ -10,8 +10,12 @@ using System.Windows.Forms;
 
 namespace Code_Hog {
     public partial class Menus : Form {
+
+        CodeHogEntities codeHogEntities;
+
         public Menus() {
             InitializeComponent();
+            codeHogEntities = new CodeHogEntities();
         }
 
         private void Menus_Load(object sender, EventArgs e) {
@@ -26,6 +30,32 @@ namespace Code_Hog {
 
         private void TicketDataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
 
+            int TicketId = Convert.ToInt32(ticketDataGridView[1, e.RowIndex]);
+            foreach(var ticket in codeHogEntities.Tickets) {
+
+                if (ticket.TicketID == TicketId) {
+
+                    ticketIDLabel.Text = ticket.TicketID.ToString();
+                    priorityLabel.Text = ticket.TicketPriority.ToString();
+                    statusLabel.Text = ticket.TicketStatus.ToString();
+
+                    foreach(var user in codeHogEntities.Users) {
+
+                        if (user.UserID == ticket.TicketReporter) {
+                            reporterNameLabel.Text = user.Username;
+                            break;
+                        }
+                    }
+
+                    descriptionTextBox.Text = ticket.TicketDescription;
+                    noteTextBox.Text = "";
+
+                    foreach (var note in codeHogEntities.Notes) {
+                        if (note.TicketID == TicketId) {
+                        }
+                    }
+                }
+            }
         }
 
         private void CreateNewTicketButton_Click(object sender, EventArgs e) {
