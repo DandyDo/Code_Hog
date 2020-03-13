@@ -25,6 +25,8 @@ namespace Code_Hog {
             InitializeComponent();
             codeHogEntities = new CodeHogEntities();
             CurrentSort = Convert.ToBoolean(ChosenSort.TicketSort);
+
+            ApplyFilterToDataGrid();
         }
 
         private void Menus_Load(object sender, EventArgs e) {
