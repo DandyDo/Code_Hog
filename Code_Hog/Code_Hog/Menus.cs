@@ -21,9 +21,19 @@ namespace Code_Hog {
         }
 
         public Menus() {
+
             InitializeComponent();
             codeHogEntities = new CodeHogEntities();
+            UpdateGridViewFont();
             CurrentSort = Convert.ToBoolean(ChosenSort.TicketSort);
+        }
+
+        private void UpdateGridViewFont() {
+
+            foreach (DataGridViewColumn column in ticketDataGridView.Columns) {
+
+                column.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.75F, GraphicsUnit.Pixel);
+            }
         }
 
         private void Menus_Load(object sender, EventArgs e) {
