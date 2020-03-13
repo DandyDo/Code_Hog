@@ -229,7 +229,6 @@
             this.label9.Size = new System.Drawing.Size(55, 20);
             this.label9.TabIndex = 13;
             this.label9.Text = "Notes:";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 

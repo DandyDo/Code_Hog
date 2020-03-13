@@ -103,9 +103,5 @@ namespace Code_Hog {
 
 
         }
-
-        private void label9_Click(object sender, EventArgs e) {
-
-        }
     }
 }
