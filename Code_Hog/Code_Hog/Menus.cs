@@ -28,13 +28,13 @@ namespace Code_Hog {
         }
 
         private void Menus_Load(object sender, EventArgs e) {
+
             // TODO: This line of code loads data into the 'codeHogDataSet1.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.codeHogDataSet1.Users);
             // TODO: This line of code loads data into the 'codeHogDataSet1.User_Roles' table. You can move, or remove it, as needed.
             this.user_RolesTableAdapter.Fill(this.codeHogDataSet1.User_Roles);
             // TODO: This line of code loads data into the 'codeHogDataSet.Tickets' table. You can move, or remove it, as needed.
             this.ticketsTableAdapter.Fill(this.codeHogDataSet.Tickets);
-
         }
 
         private void TicketDataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
@@ -88,6 +88,21 @@ namespace Code_Hog {
 
                 ticketDataGridView.Sort(ticketDataGridView.Columns[0], ListSortDirection.Ascending);
                 CurrentSort = Convert.ToBoolean(ChosenSort.TicketSort);
+            }
+        }
+
+        private void FilterDataGrid(object sender, EventArgs e) {
+
+            if (archiveCheckBox.Checked && activeCheckBox.Checked == false) {
+
+                ticketDataGridView.DataSource = codeHogEntities.Tickets.Where(x => x.TicketArchiveStatus == true).ToList();
+            }
+            else if (activeCheckBox.Checked && archiveCheckBox.Checked == false) {
+
+                ticketDataGridView.DataSource = codeHogEntities.Tickets.Where(x => x.TicketArchiveStatus == false).ToList();
+            }
+            else {
+                ticketDataGridView.DataSource = codeHogEntities.Tickets.Where(x => (x.TicketArchiveStatus == false || x.TicketArchiveStatus == true)).ToList();
             }
         }
 

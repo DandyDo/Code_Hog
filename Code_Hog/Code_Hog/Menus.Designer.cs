@@ -87,6 +87,7 @@
             // 
             this.menuTabControl.Controls.Add(this.TicketsPage);
             this.menuTabControl.Controls.Add(this.UserManagementPage);
+            this.menuTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuTabControl.Location = new System.Drawing.Point(13, 13);
             this.menuTabControl.Name = "menuTabControl";
             this.menuTabControl.SelectedIndex = 0;
@@ -120,11 +121,11 @@
             this.TicketsPage.Controls.Add(this.priorityRadioButton);
             this.TicketsPage.Controls.Add(this.archiveCheckBox);
             this.TicketsPage.Controls.Add(this.activeCheckBox);
-            this.TicketsPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TicketsPage.Location = new System.Drawing.Point(4, 22);
+            this.TicketsPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TicketsPage.Location = new System.Drawing.Point(4, 25);
             this.TicketsPage.Name = "TicketsPage";
             this.TicketsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.TicketsPage.Size = new System.Drawing.Size(1233, 687);
+            this.TicketsPage.Size = new System.Drawing.Size(1233, 684);
             this.TicketsPage.TabIndex = 0;
             this.TicketsPage.Text = "Tickets";
             this.TicketsPage.UseVisualStyleBackColor = true;
@@ -132,27 +133,27 @@
             // statusLabel
             // 
             this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(722, 55);
+            this.statusLabel.Location = new System.Drawing.Point(710, 55);
             this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(17, 20);
+            this.statusLabel.Size = new System.Drawing.Size(14, 16);
             this.statusLabel.TabIndex = 26;
             this.statusLabel.Text = "..";
             // 
             // priorityLabel
             // 
             this.priorityLabel.AutoSize = true;
-            this.priorityLabel.Location = new System.Drawing.Point(841, 17);
+            this.priorityLabel.Location = new System.Drawing.Point(833, 17);
             this.priorityLabel.Name = "priorityLabel";
-            this.priorityLabel.Size = new System.Drawing.Size(17, 20);
+            this.priorityLabel.Size = new System.Drawing.Size(14, 16);
             this.priorityLabel.TabIndex = 25;
             this.priorityLabel.Text = "..";
             // 
             // dependenciesLabel
             // 
             this.dependenciesLabel.AutoSize = true;
-            this.dependenciesLabel.Location = new System.Drawing.Point(778, 86);
+            this.dependenciesLabel.Location = new System.Drawing.Point(762, 86);
             this.dependenciesLabel.Name = "dependenciesLabel";
-            this.dependenciesLabel.Size = new System.Drawing.Size(17, 20);
+            this.dependenciesLabel.Size = new System.Drawing.Size(14, 16);
             this.dependenciesLabel.TabIndex = 1;
             this.dependenciesLabel.Text = "..";
             // 
@@ -196,27 +197,27 @@
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(717, 117);
+            this.nameTextBox.Location = new System.Drawing.Point(710, 117);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.ReadOnly = true;
-            this.nameTextBox.Size = new System.Drawing.Size(509, 26);
+            this.nameTextBox.Size = new System.Drawing.Size(516, 22);
             this.nameTextBox.TabIndex = 20;
             // 
             // reporterNameLabel
             // 
             this.reporterNameLabel.AutoSize = true;
-            this.reporterNameLabel.Location = new System.Drawing.Point(995, 55);
+            this.reporterNameLabel.Location = new System.Drawing.Point(983, 55);
             this.reporterNameLabel.Name = "reporterNameLabel";
-            this.reporterNameLabel.Size = new System.Drawing.Size(17, 20);
+            this.reporterNameLabel.Size = new System.Drawing.Size(14, 16);
             this.reporterNameLabel.TabIndex = 17;
             this.reporterNameLabel.Text = "..";
             // 
             // ticketIDLabel
             // 
             this.ticketIDLabel.AutoSize = true;
-            this.ticketIDLabel.Location = new System.Drawing.Point(730, 17);
+            this.ticketIDLabel.Location = new System.Drawing.Point(720, 17);
             this.ticketIDLabel.Name = "ticketIDLabel";
-            this.ticketIDLabel.Size = new System.Drawing.Size(17, 20);
+            this.ticketIDLabel.Size = new System.Drawing.Size(14, 16);
             this.ticketIDLabel.TabIndex = 14;
             this.ticketIDLabel.Text = "..";
             // 
@@ -225,7 +226,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(656, 478);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 20);
+            this.label9.Size = new System.Drawing.Size(47, 16);
             this.label9.TabIndex = 13;
             this.label9.Text = "Notes:";
             // 
@@ -234,7 +235,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(656, 86);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(116, 20);
+            this.label8.Size = new System.Drawing.Size(100, 16);
             this.label8.TabIndex = 12;
             this.label8.Text = "Dependencies:";
             // 
@@ -243,7 +244,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(656, 146);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 20);
+            this.label7.Size = new System.Drawing.Size(79, 16);
             this.label7.TabIndex = 11;
             this.label7.Text = "Description:";
             // 
@@ -252,7 +253,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(913, 55);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 20);
+            this.label6.Size = new System.Drawing.Size(64, 16);
             this.label6.TabIndex = 10;
             this.label6.Text = "Reporter:";
             // 
@@ -261,7 +262,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(656, 55);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 20);
+            this.label5.Size = new System.Drawing.Size(48, 16);
             this.label5.TabIndex = 9;
             this.label5.Text = "Status:";
             this.toolTip3.SetToolTip(this.label5, "1 = unresolved\r\n2 = Currently Being Addressed\r\n3 = Archived/Completed/Ignored");
@@ -271,7 +272,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(656, 120);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 20);
+            this.label4.Size = new System.Drawing.Size(48, 16);
             this.label4.TabIndex = 8;
             this.label4.Text = "Name:";
             // 
@@ -280,7 +281,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(775, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 20);
+            this.label3.Size = new System.Drawing.Size(52, 16);
             this.label3.TabIndex = 7;
             this.label3.Text = "Priority:";
             // 
@@ -289,7 +290,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(656, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 20);
+            this.label2.Size = new System.Drawing.Size(58, 16);
             this.label2.TabIndex = 6;
             this.label2.Text = "Ticket #:";
             // 
@@ -300,7 +301,6 @@
             this.ticketDataGridView.AllowUserToResizeColumns = false;
             this.ticketDataGridView.AllowUserToResizeRows = false;
             this.ticketDataGridView.AutoGenerateColumns = false;
-            this.ticketDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.ticketDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ticketDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ticketIDDataGridViewTextBoxColumn,
@@ -313,7 +313,7 @@
             this.ticketDataGridView.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -371,7 +371,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 20);
+            this.label1.Size = new System.Drawing.Size(53, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "Sort by:";
             // 
@@ -391,7 +391,7 @@
             this.ticketRadioButton.Checked = true;
             this.ticketRadioButton.Location = new System.Drawing.Point(75, 8);
             this.ticketRadioButton.Name = "ticketRadioButton";
-            this.ticketRadioButton.Size = new System.Drawing.Size(69, 24);
+            this.ticketRadioButton.Size = new System.Drawing.Size(63, 20);
             this.ticketRadioButton.TabIndex = 1;
             this.ticketRadioButton.TabStop = true;
             this.ticketRadioButton.Text = "Ticket";
@@ -404,7 +404,7 @@
             this.priorityRadioButton.AutoSize = true;
             this.priorityRadioButton.Location = new System.Drawing.Point(75, 38);
             this.priorityRadioButton.Name = "priorityRadioButton";
-            this.priorityRadioButton.Size = new System.Drawing.Size(74, 24);
+            this.priorityRadioButton.Size = new System.Drawing.Size(67, 20);
             this.priorityRadioButton.TabIndex = 2;
             this.priorityRadioButton.Text = "Priority";
             this.toolTip2.SetToolTip(this.priorityRadioButton, "Sort Tickets in Decending Order \r\nby Priority Level (Highest Priority First)");
@@ -415,10 +415,11 @@
             this.archiveCheckBox.AutoSize = true;
             this.archiveCheckBox.Location = new System.Drawing.Point(255, 39);
             this.archiveCheckBox.Name = "archiveCheckBox";
-            this.archiveCheckBox.Size = new System.Drawing.Size(80, 24);
+            this.archiveCheckBox.Size = new System.Drawing.Size(72, 20);
             this.archiveCheckBox.TabIndex = 1;
             this.archiveCheckBox.Text = "Archive";
             this.archiveCheckBox.UseVisualStyleBackColor = true;
+            this.archiveCheckBox.CheckedChanged += new System.EventHandler(this.FilterDataGrid);
             // 
             // activeCheckBox
             // 
@@ -427,18 +428,19 @@
             this.activeCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.activeCheckBox.Location = new System.Drawing.Point(255, 9);
             this.activeCheckBox.Name = "activeCheckBox";
-            this.activeCheckBox.Size = new System.Drawing.Size(71, 24);
+            this.activeCheckBox.Size = new System.Drawing.Size(64, 20);
             this.activeCheckBox.TabIndex = 0;
             this.activeCheckBox.Text = "Active";
             this.activeCheckBox.UseVisualStyleBackColor = true;
+            this.activeCheckBox.CheckedChanged += new System.EventHandler(this.FilterDataGrid);
             // 
             // UserManagementPage
             // 
             this.UserManagementPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserManagementPage.Location = new System.Drawing.Point(4, 22);
+            this.UserManagementPage.Location = new System.Drawing.Point(4, 25);
             this.UserManagementPage.Name = "UserManagementPage";
             this.UserManagementPage.Padding = new System.Windows.Forms.Padding(3);
-            this.UserManagementPage.Size = new System.Drawing.Size(1233, 687);
+            this.UserManagementPage.Size = new System.Drawing.Size(1233, 684);
             this.UserManagementPage.TabIndex = 1;
             this.UserManagementPage.Text = "User Management";
             this.UserManagementPage.UseVisualStyleBackColor = true;
