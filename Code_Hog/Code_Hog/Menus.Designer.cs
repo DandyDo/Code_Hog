@@ -42,7 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ticketDataGridView = new System.Windows.Forms.DataGridView();
             this.ticketIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ticketPriorityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ticketNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,7 +70,7 @@
             this.dependenciesLabel = new System.Windows.Forms.Label();
             this.menuTabControl.SuspendLayout();
             this.TicketsPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
@@ -110,7 +110,7 @@
             this.TicketsPage.Controls.Add(this.label4);
             this.TicketsPage.Controls.Add(this.label3);
             this.TicketsPage.Controls.Add(this.label2);
-            this.TicketsPage.Controls.Add(this.dataGridView1);
+            this.TicketsPage.Controls.Add(this.ticketDataGridView);
             this.TicketsPage.Controls.Add(this.label1);
             this.TicketsPage.Controls.Add(this.createNewTicketButton);
             this.TicketsPage.Controls.Add(this.ticketRadioButton);
@@ -270,21 +270,21 @@
             this.label2.Text = "Ticket #:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // dataGridView1
+            // ticketDataGridView
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ticketDataGridView.AutoGenerateColumns = false;
+            this.ticketDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ticketDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ticketIDDataGridViewTextBoxColumn,
             this.ticketPriorityDataGridViewTextBoxColumn,
             this.ticketNameDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.ticketsBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 69);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(624, 612);
-            this.dataGridView1.TabIndex = 5;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.ticketDataGridView.DataSource = this.ticketsBindingSource1;
+            this.ticketDataGridView.Location = new System.Drawing.Point(10, 69);
+            this.ticketDataGridView.Name = "ticketDataGridView";
+            this.ticketDataGridView.ReadOnly = true;
+            this.ticketDataGridView.Size = new System.Drawing.Size(624, 612);
+            this.ticketDataGridView.TabIndex = 5;
+            this.ticketDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ticketIDDataGridViewTextBoxColumn
             // 
@@ -468,7 +468,7 @@
             this.menuTabControl.ResumeLayout(false);
             this.TicketsPage.ResumeLayout(false);
             this.TicketsPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
@@ -494,7 +494,7 @@
         private CodeHogDataSet codeHogDataSet;
         private System.Windows.Forms.BindingSource ticketsBindingSource;
         private CodeHogDataSetTableAdapters.TicketsTableAdapter ticketsTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ticketDataGridView;
         private System.Windows.Forms.BindingSource ticketsBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ticketIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ticketPriorityDataGridViewTextBoxColumn;
