@@ -26,6 +26,8 @@
             this.components = new System.ComponentModel.Container();
             this.menuTabControl = new System.Windows.Forms.TabControl();
             this.TicketsPage = new System.Windows.Forms.TabPage();
+            this.statusLabel = new System.Windows.Forms.Label();
+            this.priorityLabel = new System.Windows.Forms.Label();
             this.dependenciesLabel = new System.Windows.Forms.Label();
             this.editTicketButton = new System.Windows.Forms.Button();
             this.addNoteButton = new System.Windows.Forms.Button();
@@ -66,9 +68,7 @@
             this.userRolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.user_RolesTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.User_RolesTableAdapter();
             this.usersTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.UsersTableAdapter();
-            this.priorityLabel = new System.Windows.Forms.Label();
-            this.statusLabel = new System.Windows.Forms.Label();
-            this.deleteTicketButton = new System.Windows.Forms.Button();
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.menuTabControl.SuspendLayout();
             this.TicketsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).BeginInit();
@@ -93,7 +93,6 @@
             // 
             // TicketsPage
             // 
-            this.TicketsPage.Controls.Add(this.deleteTicketButton);
             this.TicketsPage.Controls.Add(this.statusLabel);
             this.TicketsPage.Controls.Add(this.priorityLabel);
             this.TicketsPage.Controls.Add(this.dependenciesLabel);
@@ -128,10 +127,28 @@
             this.TicketsPage.Text = "Tickets";
             this.TicketsPage.UseVisualStyleBackColor = true;
             // 
+            // statusLabel
+            // 
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Location = new System.Drawing.Point(708, 53);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(17, 20);
+            this.statusLabel.TabIndex = 26;
+            this.statusLabel.Text = "..";
+            // 
+            // priorityLabel
+            // 
+            this.priorityLabel.AutoSize = true;
+            this.priorityLabel.Location = new System.Drawing.Point(825, 15);
+            this.priorityLabel.Name = "priorityLabel";
+            this.priorityLabel.Size = new System.Drawing.Size(17, 20);
+            this.priorityLabel.TabIndex = 25;
+            this.priorityLabel.Text = "..";
+            // 
             // dependenciesLabel
             // 
             this.dependenciesLabel.AutoSize = true;
-            this.dependenciesLabel.Location = new System.Drawing.Point(763, 50);
+            this.dependenciesLabel.Location = new System.Drawing.Point(764, 84);
             this.dependenciesLabel.Name = "dependenciesLabel";
             this.dependenciesLabel.Size = new System.Drawing.Size(17, 20);
             this.dependenciesLabel.TabIndex = 1;
@@ -186,7 +203,7 @@
             // reporterNameLabel
             // 
             this.reporterNameLabel.AutoSize = true;
-            this.reporterNameLabel.Location = new System.Drawing.Point(1072, 15);
+            this.reporterNameLabel.Location = new System.Drawing.Point(979, 53);
             this.reporterNameLabel.Name = "reporterNameLabel";
             this.reporterNameLabel.Size = new System.Drawing.Size(17, 20);
             this.reporterNameLabel.TabIndex = 17;
@@ -213,7 +230,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(641, 50);
+            this.label8.Location = new System.Drawing.Point(642, 84);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(116, 20);
             this.label8.TabIndex = 12;
@@ -231,7 +248,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(990, 15);
+            this.label6.Location = new System.Drawing.Point(897, 53);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 20);
             this.label6.TabIndex = 10;
@@ -240,11 +257,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(873, 18);
+            this.label5.Location = new System.Drawing.Point(642, 53);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 20);
             this.label5.TabIndex = 9;
             this.label5.Text = "Status:";
+            this.toolTip3.SetToolTip(this.label5, "1 = unresolved\r\n2 = Currently Being Addressed\r\n3 = Archived/Completed/Ignored");
             // 
             // label4
             // 
@@ -258,7 +276,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(754, 15);
+            this.label3.Location = new System.Drawing.Point(759, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 20);
             this.label3.TabIndex = 7;
@@ -441,33 +459,6 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // priorityLabel
-            // 
-            this.priorityLabel.AutoSize = true;
-            this.priorityLabel.Location = new System.Drawing.Point(820, 15);
-            this.priorityLabel.Name = "priorityLabel";
-            this.priorityLabel.Size = new System.Drawing.Size(17, 20);
-            this.priorityLabel.TabIndex = 25;
-            this.priorityLabel.Text = "..";
-            // 
-            // statusLabel
-            // 
-            this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(939, 18);
-            this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(17, 20);
-            this.statusLabel.TabIndex = 26;
-            this.statusLabel.Text = "..";
-            // 
-            // deleteTicketButton
-            // 
-            this.deleteTicketButton.Location = new System.Drawing.Point(646, 77);
-            this.deleteTicketButton.Name = "deleteTicketButton";
-            this.deleteTicketButton.Size = new System.Drawing.Size(111, 34);
-            this.deleteTicketButton.TabIndex = 27;
-            this.deleteTicketButton.Text = "Delete Ticket";
-            this.deleteTicketButton.UseVisualStyleBackColor = true;
-            // 
             // Menus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -539,7 +530,7 @@
         private System.Windows.Forms.Button editTicketButton;
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.Label priorityLabel;
-        private System.Windows.Forms.Button deleteTicketButton;
+        private System.Windows.Forms.ToolTip toolTip3;
     }
 }
 
