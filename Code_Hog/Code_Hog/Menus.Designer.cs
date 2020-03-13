@@ -130,7 +130,7 @@
             // statusLabel
             // 
             this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(708, 53);
+            this.statusLabel.Location = new System.Drawing.Point(706, 53);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(17, 20);
             this.statusLabel.TabIndex = 26;
@@ -148,7 +148,7 @@
             // dependenciesLabel
             // 
             this.dependenciesLabel.AutoSize = true;
-            this.dependenciesLabel.Location = new System.Drawing.Point(764, 84);
+            this.dependenciesLabel.Location = new System.Drawing.Point(762, 84);
             this.dependenciesLabel.Name = "dependenciesLabel";
             this.dependenciesLabel.Size = new System.Drawing.Size(17, 20);
             this.dependenciesLabel.TabIndex = 1;
@@ -212,7 +212,7 @@
             // ticketIDLabel
             // 
             this.ticketIDLabel.AutoSize = true;
-            this.ticketIDLabel.Location = new System.Drawing.Point(715, 15);
+            this.ticketIDLabel.Location = new System.Drawing.Point(714, 15);
             this.ticketIDLabel.Name = "ticketIDLabel";
             this.ticketIDLabel.Size = new System.Drawing.Size(17, 20);
             this.ticketIDLabel.TabIndex = 14;
@@ -230,7 +230,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(642, 84);
+            this.label8.Location = new System.Drawing.Point(640, 84);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(116, 20);
             this.label8.TabIndex = 12;
@@ -257,7 +257,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(642, 53);
+            this.label5.Location = new System.Drawing.Point(640, 53);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 20);
             this.label5.TabIndex = 9;
@@ -285,7 +285,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(641, 15);
+            this.label2.Location = new System.Drawing.Point(640, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 6;
@@ -465,7 +465,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1266, 738);
             this.Controls.Add(this.menuTabControl);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Menus";
             this.Text = "Code Hog";
             this.Load += new System.EventHandler(this.Menus_Load);
