@@ -77,25 +77,11 @@ namespace Code_Hog {
             }
         }
 
-        private void SortTicketGrid(object sender, EventArgs e) {
-
-            if (CurrentSort == Convert.ToBoolean(ChosenSort.TicketSort)) {
-
-                ticketDataGridView.Sort(ticketDataGridView.Columns[1], ListSortDirection.Ascending);
-                CurrentSort = Convert.ToBoolean(ChosenSort.PrioritySort);
-            }
-            else if (CurrentSort == Convert.ToBoolean(ChosenSort.PrioritySort)) {
-
-                ticketDataGridView.Sort(ticketDataGridView.Columns[0], ListSortDirection.Ascending);
-                CurrentSort = Convert.ToBoolean(ChosenSort.TicketSort);
-            }
-        }
-
         private void FilterDataGrid(object sender, EventArgs e) {
 
             if (archiveCheckBox.Checked && activeCheckBox.Checked == false) {
 
-                ticketDataGridView.DataSource = codeHogEntities.Tickets.Where(x => x.TicketArchiveStatus == true).ToList();
+                ticketDataGridView.DataSource = codeHogEntities.Tickets.Where(x => x.TicketArchiveStatus).ToList();
             }
             else if (activeCheckBox.Checked && archiveCheckBox.Checked == false) {
 

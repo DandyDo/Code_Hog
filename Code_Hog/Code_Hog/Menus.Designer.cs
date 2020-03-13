@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuTabControl = new System.Windows.Forms.TabControl();
             this.TicketsPage = new System.Windows.Forms.TabPage();
             this.statusLabel = new System.Windows.Forms.Label();
@@ -52,10 +52,7 @@
             this.TicketArchiveStatus = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ticketsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.codeHogDataSet = new Code_Hog.CodeHogDataSet();
-            this.label1 = new System.Windows.Forms.Label();
             this.createNewTicketButton = new System.Windows.Forms.Button();
-            this.ticketRadioButton = new System.Windows.Forms.RadioButton();
-            this.priorityRadioButton = new System.Windows.Forms.RadioButton();
             this.archiveCheckBox = new System.Windows.Forms.CheckBox();
             this.activeCheckBox = new System.Windows.Forms.CheckBox();
             this.UserManagementPage = new System.Windows.Forms.TabPage();
@@ -71,6 +68,8 @@
             this.user_RolesTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.User_RolesTableAdapter();
             this.usersTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.UsersTableAdapter();
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.menuTabControl.SuspendLayout();
             this.TicketsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).BeginInit();
@@ -96,6 +95,8 @@
             // 
             // TicketsPage
             // 
+            this.TicketsPage.Controls.Add(this.label10);
+            this.TicketsPage.Controls.Add(this.label1);
             this.TicketsPage.Controls.Add(this.statusLabel);
             this.TicketsPage.Controls.Add(this.priorityLabel);
             this.TicketsPage.Controls.Add(this.dependenciesLabel);
@@ -115,10 +116,7 @@
             this.TicketsPage.Controls.Add(this.label3);
             this.TicketsPage.Controls.Add(this.label2);
             this.TicketsPage.Controls.Add(this.ticketDataGridView);
-            this.TicketsPage.Controls.Add(this.label1);
             this.TicketsPage.Controls.Add(this.createNewTicketButton);
-            this.TicketsPage.Controls.Add(this.ticketRadioButton);
-            this.TicketsPage.Controls.Add(this.priorityRadioButton);
             this.TicketsPage.Controls.Add(this.archiveCheckBox);
             this.TicketsPage.Controls.Add(this.activeCheckBox);
             this.TicketsPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -311,14 +309,14 @@
             this.ticketDataGridView.Location = new System.Drawing.Point(10, 69);
             this.ticketDataGridView.Name = "ticketDataGridView";
             this.ticketDataGridView.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ticketDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ticketDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.ticketDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.ticketDataGridView.Size = new System.Drawing.Size(640, 612);
             this.ticketDataGridView.TabIndex = 5;
@@ -366,15 +364,6 @@
             this.codeHogDataSet.DataSetName = "CodeHogDataSet";
             this.codeHogDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Sort by:";
-            // 
             // createNewTicketButton
             // 
             this.createNewTicketButton.Location = new System.Drawing.Point(477, 14);
@@ -385,35 +374,10 @@
             this.createNewTicketButton.UseVisualStyleBackColor = true;
             this.createNewTicketButton.Click += new System.EventHandler(this.CreateNewTicketButton_Click);
             // 
-            // ticketRadioButton
-            // 
-            this.ticketRadioButton.AutoSize = true;
-            this.ticketRadioButton.Checked = true;
-            this.ticketRadioButton.Location = new System.Drawing.Point(75, 8);
-            this.ticketRadioButton.Name = "ticketRadioButton";
-            this.ticketRadioButton.Size = new System.Drawing.Size(63, 20);
-            this.ticketRadioButton.TabIndex = 1;
-            this.ticketRadioButton.TabStop = true;
-            this.ticketRadioButton.Text = "Ticket";
-            this.toolTip1.SetToolTip(this.ticketRadioButton, "Sort Tickets in Decending Order by Number\r\n");
-            this.ticketRadioButton.UseVisualStyleBackColor = true;
-            this.ticketRadioButton.CheckedChanged += new System.EventHandler(this.SortTicketGrid);
-            // 
-            // priorityRadioButton
-            // 
-            this.priorityRadioButton.AutoSize = true;
-            this.priorityRadioButton.Location = new System.Drawing.Point(75, 38);
-            this.priorityRadioButton.Name = "priorityRadioButton";
-            this.priorityRadioButton.Size = new System.Drawing.Size(67, 20);
-            this.priorityRadioButton.TabIndex = 2;
-            this.priorityRadioButton.Text = "Priority";
-            this.toolTip2.SetToolTip(this.priorityRadioButton, "Sort Tickets in Decending Order \r\nby Priority Level (Highest Priority First)");
-            this.priorityRadioButton.UseVisualStyleBackColor = true;
-            // 
             // archiveCheckBox
             // 
             this.archiveCheckBox.AutoSize = true;
-            this.archiveCheckBox.Location = new System.Drawing.Point(255, 39);
+            this.archiveCheckBox.Location = new System.Drawing.Point(71, 39);
             this.archiveCheckBox.Name = "archiveCheckBox";
             this.archiveCheckBox.Size = new System.Drawing.Size(72, 20);
             this.archiveCheckBox.TabIndex = 1;
@@ -426,7 +390,7 @@
             this.activeCheckBox.AutoSize = true;
             this.activeCheckBox.Checked = true;
             this.activeCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.activeCheckBox.Location = new System.Drawing.Point(255, 9);
+            this.activeCheckBox.Location = new System.Drawing.Point(71, 9);
             this.activeCheckBox.Name = "activeCheckBox";
             this.activeCheckBox.Size = new System.Drawing.Size(64, 20);
             this.activeCheckBox.TabIndex = 0;
@@ -487,6 +451,26 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Filter by:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(391, 48);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(259, 18);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Select The Data Grid Headers To Sort";
+            // 
             // Menus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -520,9 +504,6 @@
         private System.Windows.Forms.CheckBox archiveCheckBox;
         private System.Windows.Forms.CheckBox activeCheckBox;
         private System.Windows.Forms.Button createNewTicketButton;
-        private System.Windows.Forms.RadioButton ticketRadioButton;
-        private System.Windows.Forms.RadioButton priorityRadioButton;
-        private System.Windows.Forms.Label label1;
         private CodeHogDataSet codeHogDataSet;
         private System.Windows.Forms.BindingSource ticketsBindingSource;
         private CodeHogDataSetTableAdapters.TicketsTableAdapter ticketsTableAdapter;
@@ -560,6 +541,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ticketPriorityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ticketNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn TicketArchiveStatus;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label10;
     }
 }
 
