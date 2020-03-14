@@ -113,6 +113,9 @@ namespace Code_Hog {
             {
                 Form m = new AddNote();
                 m.Show();
+            } else
+            {
+                MessageBox.Show("Please select a Ticket before attempting to add a note");
             }
 
         }
