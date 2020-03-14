@@ -49,7 +49,7 @@
             // ticketNumPrintLabel
             // 
             this.ticketNumPrintLabel.AutoSize = true;
-            this.ticketNumPrintLabel.Location = new System.Drawing.Point(69, 13);
+            this.ticketNumPrintLabel.Location = new System.Drawing.Point(68, 9);
             this.ticketNumPrintLabel.Name = "ticketNumPrintLabel";
             this.ticketNumPrintLabel.Size = new System.Drawing.Size(30, 13);
             this.ticketNumPrintLabel.TabIndex = 1;
@@ -58,7 +58,7 @@
             // userTitleLabel
             // 
             this.userTitleLabel.AutoSize = true;
-            this.userTitleLabel.Location = new System.Drawing.Point(143, 8);
+            this.userTitleLabel.Location = new System.Drawing.Point(15, 26);
             this.userTitleLabel.Name = "userTitleLabel";
             this.userTitleLabel.Size = new System.Drawing.Size(58, 13);
             this.userTitleLabel.TabIndex = 2;
@@ -67,7 +67,7 @@
             // usernamePrintLabel
             // 
             this.usernamePrintLabel.AutoSize = true;
-            this.usernamePrintLabel.Location = new System.Drawing.Point(208, 13);
+            this.usernamePrintLabel.Location = new System.Drawing.Point(79, 26);
             this.usernamePrintLabel.Name = "usernamePrintLabel";
             this.usernamePrintLabel.Size = new System.Drawing.Size(30, 13);
             this.usernamePrintLabel.TabIndex = 3;

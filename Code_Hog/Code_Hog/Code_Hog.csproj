@@ -64,12 +64,6 @@
     <Compile Include="AddNote.Designer.cs">
       <DependentUpon>AddNote.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNoteMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddNoteMenu.Designer.cs">
-      <DependentUpon>AddNoteMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="CodeHogDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
