@@ -108,6 +108,12 @@ namespace Code_Hog {
         }
 
         private void AddNoteButton_Click(object sender, EventArgs e) {
+            //if a ticket is selected, open the add note menu
+            if (ticketIDLabel.Text != "..")
+            {
+                Form m = new AddNote();
+                m.Show();
+            }
 
         }
     }
