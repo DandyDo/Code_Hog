@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNote.Designer.cs">
+      <DependentUpon>AddNote.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddNoteMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     <Compile Include="User_Roles.cs">
       <DependentUpon>CodeHogModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddNote.resx">
+      <DependentUpon>AddNote.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
