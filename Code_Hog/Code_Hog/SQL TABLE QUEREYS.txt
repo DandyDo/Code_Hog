@@ -1,11 +1,16 @@
-﻿CREATE TABLE [dbo].[Notes] (
-    [NoteID]   INT           IDENTITY (1, 1) NOT NULL,
-    [TicketID] INT           NOT NULL,
-    [UserID]   INT           NOT NULL,
-    [Note]     VARCHAR (180) NOT NULL,
-    PRIMARY KEY CLUSTERED ([NoteID] ASC),
-    CONSTRAINT [FK_Notes_ToUsers] FOREIGN KEY ([UserID]) REFERENCES [dbo].[Users] ([UserID]),
-    CONSTRAINT [FK_Notes_ToTickets] FOREIGN KEY ([TicketID]) REFERENCES [dbo].[Tickets] ([TicketID])
+﻿CREATE TABLE [dbo].[User_Roles] (
+    [RoleID]   INT          NOT NULL,
+    [RoleName] VARCHAR (20) NOT NULL,
+    PRIMARY KEY CLUSTERED ([RoleID] ASC)
+);
+
+CREATE TABLE [dbo].[Users] (
+    [UserID]   INT          IDENTITY (1, 1) NOT NULL,
+    [Username] VARCHAR (30) NOT NULL,
+    [Password] VARCHAR (30) NOT NULL,
+    [RoleID]   INT          NOT NULL,
+    PRIMARY KEY CLUSTERED ([UserID] ASC),
+    CONSTRAINT [FK_Users_ToUserRoles] FOREIGN KEY ([RoleID]) REFERENCES [dbo].[User_Roles] ([RoleID])
 );
 
 CREATE TABLE [dbo].[Tickets] (
@@ -20,20 +25,17 @@ CREATE TABLE [dbo].[Tickets] (
     CONSTRAINT [FK_Tickets_ToUsers] FOREIGN KEY ([TicketReporter]) REFERENCES [dbo].[Users] ([UserID])
 );
 
-CREATE TABLE [dbo].[User_Roles] (
-    [RoleID]   INT          NOT NULL,
-    [RoleName] VARCHAR (20) NOT NULL,
-    PRIMARY KEY CLUSTERED ([RoleID] ASC)
+
+CREATE TABLE [dbo].[Notes] (
+    [NoteID]   INT           IDENTITY (1, 1) NOT NULL,
+    [TicketID] INT           NOT NULL,
+    [UserID]   INT           NOT NULL,
+    [Note]     VARCHAR (180) NOT NULL,
+    PRIMARY KEY CLUSTERED ([NoteID] ASC),
+    CONSTRAINT [FK_Notes_ToUsers] FOREIGN KEY ([UserID]) REFERENCES [dbo].[Users] ([UserID]),
+    CONSTRAINT [FK_Notes_ToTickets] FOREIGN KEY ([TicketID]) REFERENCES [dbo].[Tickets] ([TicketID])
 );
 
-CREATE TABLE [dbo].[Users] (
-    [UserID]   INT          IDENTITY (1, 1) NOT NULL,
-    [Username] VARCHAR (30) NOT NULL,
-    [Password] VARCHAR (30) NOT NULL,
-    [RoleID]   INT          NOT NULL,
-    PRIMARY KEY CLUSTERED ([UserID] ASC),
-    CONSTRAINT [FK_Users_ToUserRoles] FOREIGN KEY ([RoleID]) REFERENCES [dbo].[User_Roles] ([RoleID])
-);
 
 CREATE TABLE [dbo].[Dependencies] (
     [DependencyID]      INT IDENTITY (1, 1) NOT NULL,

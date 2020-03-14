@@ -13,5 +13,22 @@ namespace Code_Hog {
         public CreateTicketMenu() {
             InitializeComponent();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void CreateTicketMenu_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'codeHogDataSet.Tickets' table. You can move, or remove it, as needed.
+            this.ticketsTableAdapter.Fill(this.codeHogDataSet.Tickets);
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
