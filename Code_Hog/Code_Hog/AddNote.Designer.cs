@@ -78,6 +78,7 @@
             this.noteTextBox.AcceptsReturn = true;
             this.noteTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.noteTextBox.Location = new System.Drawing.Point(15, 70);
+            this.noteTextBox.MaxLength = 179;
             this.noteTextBox.Multiline = true;
             this.noteTextBox.Name = "noteTextBox";
             this.noteTextBox.Size = new System.Drawing.Size(223, 187);
