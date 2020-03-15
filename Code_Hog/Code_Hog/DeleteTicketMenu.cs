@@ -17,6 +17,7 @@ namespace Code_Hog {
         {
             InitializeComponent();
             codeHogEntities = new CodeHogEntities();
+            //ticketIDLabel.Text = 
         }
 
         private void CancelButton_Click(object sender, EventArgs e)

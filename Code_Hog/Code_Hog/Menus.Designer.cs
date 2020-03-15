@@ -24,9 +24,11 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuTabControl = new System.Windows.Forms.TabControl();
             this.TicketsPage = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.statusLabel = new System.Windows.Forms.Label();
             this.priorityLabel = new System.Windows.Forms.Label();
             this.dependenciesLabel = new System.Windows.Forms.Label();
@@ -68,8 +70,6 @@
             this.user_RolesTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.User_RolesTableAdapter();
             this.usersTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.UsersTableAdapter();
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.menuTabControl.SuspendLayout();
             this.TicketsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).BeginInit();
@@ -127,6 +127,26 @@
             this.TicketsPage.TabIndex = 0;
             this.TicketsPage.Text = "Tickets";
             this.TicketsPage.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(391, 48);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(259, 18);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Select The Data Grid Headers To Sort";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Filter by:";
             // 
             // statusLabel
             // 
@@ -309,14 +329,14 @@
             this.ticketDataGridView.Location = new System.Drawing.Point(10, 69);
             this.ticketDataGridView.Name = "ticketDataGridView";
             this.ticketDataGridView.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ticketDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ticketDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.ticketDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.ticketDataGridView.Size = new System.Drawing.Size(640, 612);
             this.ticketDataGridView.TabIndex = 5;
@@ -451,26 +471,6 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 16);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Filter by:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(391, 48);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(259, 18);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "Select The Data Grid Headers To Sort";
-            // 
             // Menus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -479,6 +479,7 @@
             this.Controls.Add(this.menuTabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Menus";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Code Hog";
             this.Load += new System.EventHandler(this.Menus_Load);
             this.menuTabControl.ResumeLayout(false);
