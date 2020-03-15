@@ -27,6 +27,13 @@
             this.TextName = new System.Windows.Forms.TextBox();
             this.TextDesc = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ticketIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TicketStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TicketArchiveStatus = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.TicketReporter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketPriorityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ticketsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.codeHogDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.codeHogDataSet = new Code_Hog.CodeHogDataSet();
@@ -40,13 +47,6 @@
             this.RadioPri4 = new System.Windows.Forms.RadioButton();
             this.RadioPri5 = new System.Windows.Forms.RadioButton();
             this.ButtonNewTicket = new System.Windows.Forms.Button();
-            this.ticketDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ticketPriorityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TicketReporter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TicketArchiveStatus = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.TicketStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ticketNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ticketIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSetBindingSource)).BeginInit();
@@ -88,6 +88,49 @@
             this.dataGridView1.Size = new System.Drawing.Size(927, 150);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // ticketIDDataGridViewTextBoxColumn
+            // 
+            this.ticketIDDataGridViewTextBoxColumn.DataPropertyName = "TicketID";
+            this.ticketIDDataGridViewTextBoxColumn.HeaderText = "TicketID";
+            this.ticketIDDataGridViewTextBoxColumn.Name = "ticketIDDataGridViewTextBoxColumn";
+            // 
+            // ticketNameDataGridViewTextBoxColumn
+            // 
+            this.ticketNameDataGridViewTextBoxColumn.DataPropertyName = "TicketName";
+            this.ticketNameDataGridViewTextBoxColumn.HeaderText = "TicketName";
+            this.ticketNameDataGridViewTextBoxColumn.Name = "ticketNameDataGridViewTextBoxColumn";
+            // 
+            // TicketStatus
+            // 
+            this.TicketStatus.DataPropertyName = "TicketStatus";
+            this.TicketStatus.HeaderText = "TicketStatus";
+            this.TicketStatus.Name = "TicketStatus";
+            // 
+            // TicketArchiveStatus
+            // 
+            this.TicketArchiveStatus.DataPropertyName = "TicketArchiveStatus";
+            this.TicketArchiveStatus.HeaderText = "TicketArchiveStatus";
+            this.TicketArchiveStatus.Name = "TicketArchiveStatus";
+            // 
+            // TicketReporter
+            // 
+            this.TicketReporter.DataPropertyName = "TicketReporter";
+            this.TicketReporter.HeaderText = "TicketReporter";
+            this.TicketReporter.Name = "TicketReporter";
+            // 
+            // ticketPriorityDataGridViewTextBoxColumn
+            // 
+            this.ticketPriorityDataGridViewTextBoxColumn.DataPropertyName = "TicketPriority";
+            this.ticketPriorityDataGridViewTextBoxColumn.HeaderText = "TicketPriority";
+            this.ticketPriorityDataGridViewTextBoxColumn.Name = "ticketPriorityDataGridViewTextBoxColumn";
+            // 
+            // ticketDescriptionDataGridViewTextBoxColumn
+            // 
+            this.ticketDescriptionDataGridViewTextBoxColumn.DataPropertyName = "TicketDescription";
+            this.ticketDescriptionDataGridViewTextBoxColumn.HeaderText = "TicketDescription";
+            this.ticketDescriptionDataGridViewTextBoxColumn.Name = "ticketDescriptionDataGridViewTextBoxColumn";
+            this.ticketDescriptionDataGridViewTextBoxColumn.Width = 250;
             // 
             // ticketsBindingSource
             // 
@@ -146,6 +189,7 @@
             this.RadioPri1.TabStop = true;
             this.RadioPri1.Text = "1";
             this.RadioPri1.UseVisualStyleBackColor = true;
+            this.RadioPri1.CheckedChanged += new System.EventHandler(this.RadioPri1_CheckedChanged);
             // 
             // RadioPri2
             // 
@@ -200,49 +244,6 @@
             this.ButtonNewTicket.Text = "New Ticket";
             this.ButtonNewTicket.UseVisualStyleBackColor = true;
             this.ButtonNewTicket.Click += new System.EventHandler(this.ButtonNewTicket_Click);
-            // 
-            // ticketDescriptionDataGridViewTextBoxColumn
-            // 
-            this.ticketDescriptionDataGridViewTextBoxColumn.DataPropertyName = "TicketDescription";
-            this.ticketDescriptionDataGridViewTextBoxColumn.HeaderText = "TicketDescription";
-            this.ticketDescriptionDataGridViewTextBoxColumn.Name = "ticketDescriptionDataGridViewTextBoxColumn";
-            this.ticketDescriptionDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // ticketPriorityDataGridViewTextBoxColumn
-            // 
-            this.ticketPriorityDataGridViewTextBoxColumn.DataPropertyName = "TicketPriority";
-            this.ticketPriorityDataGridViewTextBoxColumn.HeaderText = "TicketPriority";
-            this.ticketPriorityDataGridViewTextBoxColumn.Name = "ticketPriorityDataGridViewTextBoxColumn";
-            // 
-            // TicketReporter
-            // 
-            this.TicketReporter.DataPropertyName = "TicketReporter";
-            this.TicketReporter.HeaderText = "TicketReporter";
-            this.TicketReporter.Name = "TicketReporter";
-            // 
-            // TicketArchiveStatus
-            // 
-            this.TicketArchiveStatus.DataPropertyName = "TicketArchiveStatus";
-            this.TicketArchiveStatus.HeaderText = "TicketArchiveStatus";
-            this.TicketArchiveStatus.Name = "TicketArchiveStatus";
-            // 
-            // TicketStatus
-            // 
-            this.TicketStatus.DataPropertyName = "TicketStatus";
-            this.TicketStatus.HeaderText = "TicketStatus";
-            this.TicketStatus.Name = "TicketStatus";
-            // 
-            // ticketNameDataGridViewTextBoxColumn
-            // 
-            this.ticketNameDataGridViewTextBoxColumn.DataPropertyName = "TicketName";
-            this.ticketNameDataGridViewTextBoxColumn.HeaderText = "TicketName";
-            this.ticketNameDataGridViewTextBoxColumn.Name = "ticketNameDataGridViewTextBoxColumn";
-            // 
-            // ticketIDDataGridViewTextBoxColumn
-            // 
-            this.ticketIDDataGridViewTextBoxColumn.DataPropertyName = "TicketID";
-            this.ticketIDDataGridViewTextBoxColumn.HeaderText = "TicketID";
-            this.ticketIDDataGridViewTextBoxColumn.Name = "ticketIDDataGridViewTextBoxColumn";
             // 
             // CreateTicketMenu
             // 
