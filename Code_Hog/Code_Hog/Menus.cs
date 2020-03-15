@@ -104,11 +104,22 @@ namespace Code_Hog {
         }
 
         private void EditTicketButton_Click(object sender, EventArgs e) {
+
+            //This is to prevent the user from creating multiple EditTicketMenu forms
             EditTicketMenu editTicketMenu = new EditTicketMenu();
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is EditTicketMenu)
+                {
+                    form.Focus();
+                    return;
+                }
+            }
             editTicketMenu.Show();
         }
 
         private void AddNoteButton_Click(object sender, EventArgs e) {
+
             //if a ticket is selected, open the add note menu
             if (ticketIDLabel.Text != "..")
             {

@@ -27,7 +27,7 @@ namespace Code_Hog {
 
         private void DeleteTicketButton_Click(object sender, EventArgs e)
         {
-            int TicketId = Convert.ToInt32(ticketIDLabel.Text); 
+            int TicketId = Convert.ToInt32(ticketIDLabel.Text);
             foreach (var ticket in codeHogEntities.Tickets)
             {
                 if (ticket.TicketID == TicketId)
