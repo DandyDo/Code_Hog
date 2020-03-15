@@ -27,14 +27,14 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.codeHogDataSet = new Code_Hog.CodeHogDataSet();
-            this.codeHogDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ticketsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ticketsTableAdapter = new Code_Hog.CodeHogDataSetTableAdapters.TicketsTableAdapter();
             this.ticketIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ticketNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ticketPriorityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ticketDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.codeHogDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.codeHogDataSet = new Code_Hog.CodeHogDataSet();
+            this.ticketsTableAdapter = new Code_Hog.CodeHogDataSetTableAdapters.TicketsTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,9 +44,9 @@
             this.RadioPri4 = new System.Windows.Forms.RadioButton();
             this.RadioPri5 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -79,25 +79,6 @@
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // codeHogDataSet
-            // 
-            this.codeHogDataSet.DataSetName = "CodeHogDataSet";
-            this.codeHogDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // codeHogDataSetBindingSource
-            // 
-            this.codeHogDataSetBindingSource.DataSource = this.codeHogDataSet;
-            this.codeHogDataSetBindingSource.Position = 0;
-            // 
-            // ticketsBindingSource
-            // 
-            this.ticketsBindingSource.DataMember = "Tickets";
-            this.ticketsBindingSource.DataSource = this.codeHogDataSetBindingSource;
-            // 
-            // ticketsTableAdapter
-            // 
-            this.ticketsTableAdapter.ClearBeforeFill = true;
-            // 
             // ticketIDDataGridViewTextBoxColumn
             // 
             this.ticketIDDataGridViewTextBoxColumn.DataPropertyName = "TicketID";
@@ -122,6 +103,25 @@
             this.ticketDescriptionDataGridViewTextBoxColumn.HeaderText = "TicketDescription";
             this.ticketDescriptionDataGridViewTextBoxColumn.Name = "ticketDescriptionDataGridViewTextBoxColumn";
             this.ticketDescriptionDataGridViewTextBoxColumn.Width = 500;
+            // 
+            // ticketsBindingSource
+            // 
+            this.ticketsBindingSource.DataMember = "Tickets";
+            this.ticketsBindingSource.DataSource = this.codeHogDataSetBindingSource;
+            // 
+            // codeHogDataSetBindingSource
+            // 
+            this.codeHogDataSetBindingSource.DataSource = this.codeHogDataSet;
+            this.codeHogDataSetBindingSource.Position = 0;
+            // 
+            // codeHogDataSet
+            // 
+            this.codeHogDataSet.DataSetName = "CodeHogDataSet";
+            this.codeHogDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ticketsTableAdapter
+            // 
+            this.ticketsTableAdapter.ClearBeforeFill = true;
             // 
             // label1
             // 
@@ -221,13 +221,15 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "CreateTicketMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.CreateTicketMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

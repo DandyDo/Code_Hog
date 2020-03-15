@@ -22,7 +22,7 @@ namespace Code_Hog {
 
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
-            //TO DO: edit ticket stuff then SAVE
+            //TO DO: Save ticket changes before closing
             Close();
         }
 
