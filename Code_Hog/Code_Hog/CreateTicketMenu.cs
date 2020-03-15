@@ -30,5 +30,44 @@ namespace Code_Hog {
         {
 
         }
+
+        private void ButtonNewTicket_Click(object sender, EventArgs e)
+        {
+            if (TextName.TextLength == 0 || TextDesc.TextLength == 0)
+                MessageBox.Show("Bro this is empty");
+            else
+            {
+                var temp = new CodeHogEntities();
+
+                Console.WriteLine("Femlaes they be weird");
+                foreach(var wow in temp.Tickets)
+                {
+                    foreach(var shit in wow.Dependencies)
+                    {
+                        Console.WriteLine(shit.Ticket);
+                        Console.WriteLine(shit.Ticket1);
+                    }
+
+                    foreach(var shit in wow.Dependencies1)
+                    {
+                        Console.WriteLine(shit.Ticket);
+                        Console.WriteLine(shit.Ticket1);
+                    }
+
+                }
+                int Status = 0;
+                bool TicketArchieveStatus = false;
+                //This should be change, to 
+                int Reporter = 1;
+            }
+
+        }
+
+        private void ButtonReturnMain_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menus Menus = new Menus();
+            Menus.Show();
+        }
     }
 }
