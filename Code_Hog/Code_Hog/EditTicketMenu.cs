@@ -17,17 +17,8 @@ namespace Code_Hog {
 
         private void DeleteTicketButton_Click(object sender, EventArgs e)
         {
-            //This is to prevent the user from creating multiple deleteTicketMenu forms
             DeleteTicketMenu deleteTicketMenu = new DeleteTicketMenu();
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form is DeleteTicketMenu)
-                {
-                    form.Focus();
-                    return;
-                }
-            }
-            deleteTicketMenu.Show();
+            deleteTicketMenu.ShowDialog();
         }
 
         private void ConfirmButton_Click(object sender, EventArgs e)
