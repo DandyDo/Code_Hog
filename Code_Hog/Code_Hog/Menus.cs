@@ -122,5 +122,21 @@ namespace Code_Hog {
             }
 
         }
+
+        private void addUserButton_Click(object sender, EventArgs e) {
+
+        }
+
+        private void updateUserButton_Click(object sender, EventArgs e) {
+
+        }
+
+        private void deleteUserButton_Click(object sender, EventArgs e) {
+
+        }
+
+        private void userListBox_SelectedIndexChanged(object sender, EventArgs e) {
+
+        }
     }
 }
