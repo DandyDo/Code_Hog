@@ -11,7 +11,9 @@ namespace Code_Hog
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class Ticket
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,6 +24,7 @@ namespace Code_Hog
             this.Notes = new HashSet<Note>();
         }
     
+       [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int TicketID { get; set; }
         public string TicketName { get; set; }
         public int TicketStatus { get; set; }

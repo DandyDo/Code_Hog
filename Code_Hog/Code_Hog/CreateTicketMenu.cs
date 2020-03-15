@@ -42,6 +42,11 @@ namespace Code_Hog {
 
                 //Database.Tickets.Add()
 
+                foreach(Ticket temp in Database.Tickets)
+                {
+                    Console.WriteLine("ID " + temp.TicketID);
+                }
+
 
                 Console.WriteLine("Femlaes they be weird");
 
@@ -63,7 +68,7 @@ namespace Code_Hog {
 
                 ticket.TicketPriority = 1;
 
-                ticket.TicketID = 5;
+                //ticket.TicketID = 5;
                 //ticket.TicketID = (Database.Tickets.Count());
 
                 Console.WriteLine(
@@ -79,7 +84,9 @@ namespace Code_Hog {
                     );
 
                 Database.Tickets.Add(ticket);
-                //Database.SaveChanges();
+                Database.SaveChanges();
+
+
             }
 
         }
