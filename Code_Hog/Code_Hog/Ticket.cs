@@ -24,7 +24,8 @@ namespace Code_Hog
             this.Notes = new HashSet<Note>();
         }
     
-       [DatabaseGenerated(DatabaseGeneratedOption.None)]
+         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int TicketID { get; set; }
         public string TicketName { get; set; }
         public int TicketStatus { get; set; }

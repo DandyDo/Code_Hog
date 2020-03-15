@@ -48,42 +48,23 @@ namespace Code_Hog {
                 }
 
 
-                Console.WriteLine("Femlaes they be weird");
+                var Smash = Database.Tickets.ElementAt(0);
+                var SMash = new Ticket()
+                {
+                    TicketArchiveStatus = false,
+                    TicketStatus = 0,
+                    TicketPriority = 0,
 
-                Ticket ticket = new Ticket( );
-                
+                    TicketDescription = "WOW",
+                    TicketName = "Fuck",
+                    TicketReporter = 0
+                };
+
+                Database.Tickets.Add(Smash);
+
                 // This is the default values of a newly created ticket.
-                int Status = 0;
-                bool TicketArchieveStatus = false;
-                //This should be change, depending on the user who logs in. This is their user id.
-                int Reporter = 1;
+                //var wow=Database.Database.ExecuteSqlCommand("FROM * SELECT *");
 
-                ticket.TicketArchiveStatus = TicketArchieveStatus;
-                ticket.TicketStatus = Status;
-                ticket.TicketReporter = Reporter;
-
-                //This is from the textboxes direclty
-                ticket.TicketDescription = TextDesc.Text;
-                ticket.TicketName = TextName.Text;
-
-                ticket.TicketPriority = 1;
-
-                //ticket.TicketID = 5;
-                //ticket.TicketID = (Database.Tickets.Count());
-
-                Console.WriteLine(
-                    ticket.TicketID + "\n" +
-                    ticket.TicketName + "\n"+
-                    ticket.TicketDescription + "\n"+
-
-                    ticket.TicketPriority + "\n"+
-                    ticket.TicketStatus + "\n"+
-                    ticket.TicketReporter + "\n"+
-                    ticket.TicketArchiveStatus + "\n"
-
-                    );
-
-                Database.Tickets.Add(ticket);
                 Database.SaveChanges();
 
 
