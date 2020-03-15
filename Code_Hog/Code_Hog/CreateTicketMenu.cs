@@ -33,6 +33,7 @@ namespace Code_Hog {
 
         private void ButtonNewTicket_Click(object sender, EventArgs e)
         {
+            //Prioerity Checking
             int Pri = -1;
             if (RadioPri1.Checked)
                 Pri = 1;
@@ -44,12 +45,19 @@ namespace Code_Hog {
                 Pri = 4;
             else if (RadioPri5.Checked)
                 Pri = 5;
+
+            //Checking if all the required fileds are tehere
             if (TextName.TextLength == 0 || TextDesc.TextLength == 0 || Pri == -1)
                 MessageBox.Show("Bro this is empty");
             else
             {
+
                 //Setting up the database.
                 var Database = new CodeHogEntities();
+
+
+
+
 
 
                 //Reporter should be the person who logs in UserId. Just putting a placeholder here for future referecne.
@@ -58,6 +66,8 @@ namespace Code_Hog {
                 {
                     TicketArchiveStatus = false,
                     TicketStatus = 0,
+//                    Dependencies=DependID,
+
 
 
 
@@ -67,8 +77,30 @@ namespace Code_Hog {
                 TicketReporter = Reporter 
                 };
 
+                // Dependcies checking
+
+                //Gettingt he piramary ticket ID
+                var query = Database.Tickets.Where(s => s.TicketID == NewTicket.TicketID);
+                Ticket Ticketp = query.FirstOrDefault<Ticket>();
+
+                //Create a new dependecny, and add it to database
+                foreach (DataGridViewRow temp in dataGridView1.SelectedRows)
+                {
+
+                    query = Database.Tickets.Where(s => s.TicketID == NewTicket.TicketID);
+                    Dependency dependency = new Dependency()
+                    {
+                        DependentTicketID = query.FirstOrDefault<Ticket>().TicketID,
+                        TicketID=Ticketp.TicketID
+                    };
+                    Database.Dependencies.Add(dependency);
+
+                }
+
+
                 Database.Tickets.Add(NewTicket);
                 Database.SaveChanges();
+                dataGridView1.Refresh();
 
                 // This is the default values of a newly created ticket.
                 //var wow=Database.Database.ExecuteSqlCommand("FROM * SELECT *");
