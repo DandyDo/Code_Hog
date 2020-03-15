@@ -37,28 +37,49 @@ namespace Code_Hog {
                 MessageBox.Show("Bro this is empty");
             else
             {
-                var temp = new CodeHogEntities();
+                //Setting up the database.
+                var Database = new CodeHogEntities();
+
+                //Database.Tickets.Add()
+
 
                 Console.WriteLine("Femlaes they be weird");
-                foreach(var wow in temp.Tickets)
-                {
-                    foreach(var shit in wow.Dependencies)
-                    {
-                        Console.WriteLine(shit.Ticket);
-                        Console.WriteLine(shit.Ticket1);
-                    }
 
-                    foreach(var shit in wow.Dependencies1)
-                    {
-                        Console.WriteLine(shit.Ticket);
-                        Console.WriteLine(shit.Ticket1);
-                    }
-
-                }
+                Ticket ticket = new Ticket( );
+                
+                // This is the default values of a newly created ticket.
                 int Status = 0;
                 bool TicketArchieveStatus = false;
-                //This should be change, to 
+                //This should be change, depending on the user who logs in. This is their user id.
                 int Reporter = 1;
+
+                ticket.TicketArchiveStatus = TicketArchieveStatus;
+                ticket.TicketStatus = Status;
+                ticket.TicketReporter = Reporter;
+
+                //This is from the textboxes direclty
+                ticket.TicketDescription = TextDesc.Text;
+                ticket.TicketName = TextName.Text;
+
+                ticket.TicketPriority = 1;
+
+                ticket.TicketID = 5;
+                //ticket.TicketID = (Database.Tickets.Count());
+
+                Console.WriteLine(
+                    ticket.TicketID + "\n" +
+                    ticket.TicketName + "\n"+
+                    ticket.TicketDescription + "\n"+
+
+                    ticket.TicketPriority + "\n"+
+                    ticket.TicketStatus + "\n"+
+                    ticket.TicketReporter + "\n"+
+                    ticket.TicketArchiveStatus + "\n"
+
+                    );
+
+                Database.Tickets.Add(ticket);
+                //Database.SaveChanges();
             }
 
         }
