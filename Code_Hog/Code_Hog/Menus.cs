@@ -104,7 +104,8 @@ namespace Code_Hog {
         }
 
         private void EditTicketButton_Click(object sender, EventArgs e) {
-
+            EditTicketMenu editTicketMenu = new EditTicketMenu();
+            editTicketMenu.Show();
         }
 
         private void AddNoteButton_Click(object sender, EventArgs e) {

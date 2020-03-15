@@ -13,5 +13,22 @@ namespace Code_Hog {
         public EditTicketMenu() {
             InitializeComponent();
         }
+
+        private void DeleteTicketButton_Click(object sender, EventArgs e)
+        {
+            DeleteTicketMenu deleteTicketMenu = new DeleteTicketMenu();
+            deleteTicketMenu.Show();
+        }
+
+        private void ConfirmButton_Click(object sender, EventArgs e)
+        {
+            //TO DO: edit ticket stuff then SAVE
+            Close();
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
