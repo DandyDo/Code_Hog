@@ -76,12 +76,14 @@ namespace Code_Hog {
                     TicketPriority = Pri,
                 TicketReporter = Reporter 
                 };
+                Console.WriteLine("Ticket ID" + NewTicket.TicketID);
 
                 // Dependcies checking
 
                 //Gettingt he piramary ticket ID
                 var query = Database.Tickets.Where(s => s.TicketID == NewTicket.TicketID);
                 Ticket Ticketp = query.FirstOrDefault<Ticket>();
+
 
                 //Create a new dependecny, and add it to database
                 foreach (DataGridViewRow temp in dataGridView1.SelectedRows)
@@ -94,8 +96,11 @@ namespace Code_Hog {
                         TicketID=Ticketp.TicketID
                     };
                     Database.Dependencies.Add(dependency);
+                    Console.WriteLine(dependency.DependencyID + "\t" + Ticketp.TicketID);
 
                 }
+                //query = Database.Dependencies.Where(s => s.DependentTicketID == );
+                //NewTicket.Dependencies=
 
 
                 Database.Tickets.Add(NewTicket);

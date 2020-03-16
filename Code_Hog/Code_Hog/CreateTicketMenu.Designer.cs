@@ -47,10 +47,14 @@
             this.RadioPri4 = new System.Windows.Forms.RadioButton();
             this.RadioPri5 = new System.Windows.Forms.RadioButton();
             this.ButtonNewTicket = new System.Windows.Forms.Button();
+            this.codeHogDataSet1 = new Code_Hog.CodeHogDataSet1();
+            this.codeHogDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // TextName
@@ -245,11 +249,21 @@
             this.ButtonNewTicket.UseVisualStyleBackColor = true;
             this.ButtonNewTicket.Click += new System.EventHandler(this.ButtonNewTicket_Click);
             // 
+            // codeHogDataSet1
+            // 
+            this.codeHogDataSet1.DataSetName = "CodeHogDataSet1";
+            this.codeHogDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // codeHogDataSet1BindingSource
+            // 
+            this.codeHogDataSet1BindingSource.DataSource = this.codeHogDataSet1;
+            this.codeHogDataSet1BindingSource.Position = 0;
+            // 
             // CreateTicketMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 450);
+            this.ClientSize = new System.Drawing.Size(1103, 598);
             this.Controls.Add(this.ButtonNewTicket);
             this.Controls.Add(this.RadioPri5);
             this.Controls.Add(this.RadioPri4);
@@ -269,6 +283,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,5 +315,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TicketReporter;
         private System.Windows.Forms.DataGridViewTextBoxColumn ticketPriorityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ticketDescriptionDataGridViewTextBoxColumn;
+        private CodeHogDataSet1 codeHogDataSet1;
+        private System.Windows.Forms.BindingSource codeHogDataSet1BindingSource;
     }
 }
