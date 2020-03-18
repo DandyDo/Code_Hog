@@ -24,8 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuTabControl = new System.Windows.Forms.TabControl();
             this.TicketsPage = new System.Windows.Forms.TabPage();
             this.label10 = new System.Windows.Forms.Label();
@@ -71,6 +70,20 @@
             this.user_RolesTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.User_RolesTableAdapter();
             this.usersTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.UsersTableAdapter();
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.userIDTextBox = new System.Windows.Forms.TextBox();
+            this.userNameTextBox = new System.Windows.Forms.TextBox();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.roleNameTextBox = new System.Windows.Forms.TextBox();
+            this.addUserButton = new System.Windows.Forms.Button();
+            this.deleteUserButton = new System.Windows.Forms.Button();
+            this.updateUserButton = new System.Windows.Forms.Button();
+            this.clearUserFieldsButton = new System.Windows.Forms.Button();
+            this.userListBox = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuTabControl.SuspendLayout();
             this.TicketsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).BeginInit();
@@ -331,7 +344,6 @@
             this.ticketDataGridView.Location = new System.Drawing.Point(10, 69);
             this.ticketDataGridView.Name = "ticketDataGridView";
             this.ticketDataGridView.ReadOnly = true;
-
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -343,7 +355,6 @@
             this.ticketDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.ticketDataGridView.Size = new System.Drawing.Size(640, 612);
             this.ticketDataGridView.TabIndex = 5;
-            this.ticketDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ticketDataGridView_CellContentClick);
             this.ticketDataGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TicketDataGridView_RowHeaderMouseClick);
             // 
             // ticketIDDataGridViewTextBoxColumn
@@ -489,7 +500,6 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
-
             // label14
             // 
             this.label14.AutoSize = true;
@@ -620,7 +630,6 @@
             this.textBox1.Size = new System.Drawing.Size(429, 296);
             this.textBox1.TabIndex = 14;
             // 
-
             // Menus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -712,3 +721,4 @@
         private System.Windows.Forms.TextBox textBox1;
     }
 }
+
