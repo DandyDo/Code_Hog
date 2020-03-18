@@ -24,7 +24,6 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuTabControl = new System.Windows.Forms.TabControl();
             this.TicketsPage = new System.Windows.Forms.TabPage();
@@ -76,7 +75,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet)).BeginInit();
-            this.UserManagementPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1)).BeginInit();
@@ -331,15 +329,14 @@
             this.ticketDataGridView.Location = new System.Drawing.Point(10, 69);
             this.ticketDataGridView.Name = "ticketDataGridView";
             this.ticketDataGridView.ReadOnly = true;
-
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ticketDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ticketDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.ticketDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.ticketDataGridView.Size = new System.Drawing.Size(640, 612);
             this.ticketDataGridView.TabIndex = 5;
@@ -424,20 +421,6 @@
             // 
             // UserManagementPage
             // 
-            this.UserManagementPage.Controls.Add(this.userListBox);
-            this.UserManagementPage.Controls.Add(this.clearUserFieldsButton);
-            this.UserManagementPage.Controls.Add(this.updateUserButton);
-            this.UserManagementPage.Controls.Add(this.deleteUserButton);
-            this.UserManagementPage.Controls.Add(this.addUserButton);
-            this.UserManagementPage.Controls.Add(this.roleNameTextBox);
-            this.UserManagementPage.Controls.Add(this.passwordTextBox);
-            this.UserManagementPage.Controls.Add(this.userNameTextBox);
-            this.UserManagementPage.Controls.Add(this.userIDTextBox);
-            this.UserManagementPage.Controls.Add(this.label12);
-            this.UserManagementPage.Controls.Add(this.label11);
-            this.UserManagementPage.Controls.Add(this.label13);
-            this.UserManagementPage.Controls.Add(this.label14);
-            this.UserManagementPage.Controls.Add(this.textBox1);
             this.UserManagementPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserManagementPage.Location = new System.Drawing.Point(4, 25);
             this.UserManagementPage.Name = "UserManagementPage";
@@ -489,138 +472,6 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
-
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.Control;
-            this.label14.Location = new System.Drawing.Point(592, 156);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(68, 20);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "User ID:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.SystemColors.Control;
-            this.label13.Location = new System.Drawing.Point(592, 216);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(87, 20);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Username:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.SystemColors.Control;
-            this.label11.Location = new System.Drawing.Point(592, 263);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 20);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Password:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(592, 307);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 20);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Role:";
-            // 
-            // userIDTextBox
-            // 
-            this.userIDTextBox.Location = new System.Drawing.Point(723, 153);
-            this.userIDTextBox.Name = "userIDTextBox";
-            this.userIDTextBox.ReadOnly = true;
-            this.userIDTextBox.Size = new System.Drawing.Size(100, 26);
-            this.userIDTextBox.TabIndex = 5;
-            // 
-            // userNameTextBox
-            // 
-            this.userNameTextBox.Location = new System.Drawing.Point(723, 213);
-            this.userNameTextBox.Name = "userNameTextBox";
-            this.userNameTextBox.Size = new System.Drawing.Size(260, 26);
-            this.userNameTextBox.TabIndex = 6;
-            // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.Location = new System.Drawing.Point(723, 260);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(260, 26);
-            this.passwordTextBox.TabIndex = 7;
-            // 
-            // roleNameTextBox
-            // 
-            this.roleNameTextBox.Location = new System.Drawing.Point(723, 304);
-            this.roleNameTextBox.Name = "roleNameTextBox";
-            this.roleNameTextBox.Size = new System.Drawing.Size(260, 26);
-            this.roleNameTextBox.TabIndex = 8;
-            // 
-            // addUserButton
-            // 
-            this.addUserButton.BackColor = System.Drawing.Color.Transparent;
-            this.addUserButton.Location = new System.Drawing.Point(596, 372);
-            this.addUserButton.Name = "addUserButton";
-            this.addUserButton.Size = new System.Drawing.Size(90, 30);
-            this.addUserButton.TabIndex = 9;
-            this.addUserButton.Text = "Add User";
-            this.addUserButton.UseVisualStyleBackColor = false;
-            this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
-            // 
-            // deleteUserButton
-            // 
-            this.deleteUserButton.BackColor = System.Drawing.Color.Transparent;
-            this.deleteUserButton.Location = new System.Drawing.Point(880, 372);
-            this.deleteUserButton.Name = "deleteUserButton";
-            this.deleteUserButton.Size = new System.Drawing.Size(103, 30);
-            this.deleteUserButton.TabIndex = 10;
-            this.deleteUserButton.Text = "Delete User";
-            this.deleteUserButton.UseVisualStyleBackColor = false;
-            this.deleteUserButton.Click += new System.EventHandler(this.deleteUserButton_Click);
-            // 
-            // updateUserButton
-            // 
-            this.updateUserButton.Location = new System.Drawing.Point(732, 372);
-            this.updateUserButton.Name = "updateUserButton";
-            this.updateUserButton.Size = new System.Drawing.Size(109, 30);
-            this.updateUserButton.TabIndex = 11;
-            this.updateUserButton.Text = "Update User";
-            this.updateUserButton.UseVisualStyleBackColor = true;
-            this.updateUserButton.Click += new System.EventHandler(this.updateUserButton_Click);
-            // 
-            // clearUserFieldsButton
-            // 
-            this.clearUserFieldsButton.Location = new System.Drawing.Point(881, 151);
-            this.clearUserFieldsButton.Name = "clearUserFieldsButton";
-            this.clearUserFieldsButton.Size = new System.Drawing.Size(102, 30);
-            this.clearUserFieldsButton.TabIndex = 12;
-            this.clearUserFieldsButton.Text = "Clear Fields";
-            this.clearUserFieldsButton.UseVisualStyleBackColor = true;
-            // 
-            // userListBox
-            // 
-            this.userListBox.FormattingEnabled = true;
-            this.userListBox.ItemHeight = 20;
-            this.userListBox.Location = new System.Drawing.Point(6, 6);
-            this.userListBox.Name = "userListBox";
-            this.userListBox.Size = new System.Drawing.Size(545, 664);
-            this.userListBox.TabIndex = 13;
-            this.userListBox.SelectedIndexChanged += new System.EventHandler(this.userListBox_SelectedIndexChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(578, 135);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(429, 296);
-            this.textBox1.TabIndex = 14;
-            // 
-
             // Menus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -629,7 +480,6 @@
             this.Controls.Add(this.menuTabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Menus";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Code Hog";
             this.Load += new System.EventHandler(this.Menus_Load);
             this.menuTabControl.ResumeLayout(false);
@@ -638,8 +488,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet)).EndInit();
-            this.UserManagementPage.ResumeLayout(false);
-            this.UserManagementPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1)).EndInit();
@@ -696,19 +544,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn TicketArchiveStatus;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button clearUserFieldsButton;
-        private System.Windows.Forms.Button updateUserButton;
-        private System.Windows.Forms.Button deleteUserButton;
-        private System.Windows.Forms.Button addUserButton;
-        private System.Windows.Forms.TextBox roleNameTextBox;
-        private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.TextBox userNameTextBox;
-        private System.Windows.Forms.TextBox userIDTextBox;
-        private System.Windows.Forms.ListBox userListBox;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
+
