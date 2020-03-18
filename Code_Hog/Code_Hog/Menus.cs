@@ -100,7 +100,9 @@ namespace Code_Hog {
         }
 
         private void CreateNewTicketButton_Click(object sender, EventArgs e) {
-
+            this.Hide();
+            CreateTicketMenu createTicketMenu = new CreateTicketMenu();
+            createTicketMenu.Show();
         }
 
         private void EditTicketButton_Click(object sender, EventArgs e) {
@@ -123,6 +125,10 @@ namespace Code_Hog {
 
         }
 
+
+        private void ticketDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         private void addUserButton_Click(object sender, EventArgs e) {
 
         }
@@ -136,6 +142,7 @@ namespace Code_Hog {
         }
 
         private void userListBox_SelectedIndexChanged(object sender, EventArgs e) {
+
 
         }
     }
