@@ -53,6 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
@@ -135,6 +136,25 @@
             this.ticketDescriptionDataGridViewTextBoxColumn.HeaderText = "TicketDescription";
             this.ticketDescriptionDataGridViewTextBoxColumn.Name = "ticketDescriptionDataGridViewTextBoxColumn";
             this.ticketDescriptionDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // ticketsBindingSource
+            // 
+            this.ticketsBindingSource.DataMember = "Tickets";
+            this.ticketsBindingSource.DataSource = this.codeHogDataSetBindingSource;
+            // 
+            // codeHogDataSetBindingSource
+            // 
+            this.codeHogDataSetBindingSource.DataSource = this.codeHogDataSet;
+            this.codeHogDataSetBindingSource.Position = 0;
+            // 
+            // codeHogDataSet
+            // 
+            this.codeHogDataSet.DataSetName = "CodeHogDataSet";
+            this.codeHogDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ticketsTableAdapter
+            // 
+            this.ticketsTableAdapter.ClearBeforeFill = true;
             // 
             // ticketsBindingSource
             // 
@@ -274,9 +294,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+
             this.Controls.Add(this.TextDesc);
             this.Controls.Add(this.TextName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "CreateTicketMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.CreateTicketMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

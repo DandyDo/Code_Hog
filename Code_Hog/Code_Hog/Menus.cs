@@ -107,9 +107,12 @@ namespace Code_Hog {
 
         private void EditTicketButton_Click(object sender, EventArgs e) {
 
+            EditTicketMenu editTicketMenu = new EditTicketMenu();
+            editTicketMenu.ShowDialog();
         }
 
         private void AddNoteButton_Click(object sender, EventArgs e) {
+
             //if a ticket is selected, open the add note menu
             if (ticketIDLabel.Text != "..")
             {
@@ -122,8 +125,24 @@ namespace Code_Hog {
 
         }
 
+
         private void ticketDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        private void addUserButton_Click(object sender, EventArgs e) {
+
+        }
+
+        private void updateUserButton_Click(object sender, EventArgs e) {
+
+        }
+
+        private void deleteUserButton_Click(object sender, EventArgs e) {
+
+        }
+
+        private void userListBox_SelectedIndexChanged(object sender, EventArgs e) {
+
 
         }
     }
