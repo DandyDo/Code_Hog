@@ -14,13 +14,11 @@ namespace Code_Hog
     {
         protected string newNote;
 
-        public AddNote(int ticketNum)
+        public AddNote()
         {
             InitializeComponent();
-
-            //set the title component labels to the correct text
-            ticketNumPrintLabel.Text = ticketNum.ToString();
             
+            //set the title component labels to the correct text
             //TODO
 
         }

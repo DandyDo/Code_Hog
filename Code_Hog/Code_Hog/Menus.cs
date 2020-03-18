@@ -13,7 +13,6 @@ namespace Code_Hog {
 
         CodeHogEntities codeHogEntities;
         public bool CurrentSort { get; private set; }
-        public int CurrTicketID;
 
         enum ChosenSort {
 
@@ -43,8 +42,6 @@ namespace Code_Hog {
         private void TicketDataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
 
             int TicketId = Convert.ToInt32(ticketDataGridView[1, e.RowIndex]);
-            CurrTicketID = TicketId;
-
             PrintTicketToLabelsAndTextBoxes(TicketId);
         }
 
@@ -116,7 +113,7 @@ namespace Code_Hog {
             //if a ticket is selected, open the add note menu
             if (ticketIDLabel.Text != "..")
             {
-                Form m = new AddNote(CurrTicketID);
+                Form m = new AddNote();
                 m.Show();
             } else
             {
