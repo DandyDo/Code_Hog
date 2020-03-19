@@ -13,6 +13,7 @@ namespace Code_Hog {
 
         CodeHogEntities codeHogEntities;
         public bool CurrentSort { get; private set; }
+        public int CurrTicket;
 
         enum ChosenSort {
 
@@ -52,6 +53,7 @@ namespace Code_Hog {
                 if (ticket.TicketID == TicketId) {
 
                     ticketIDLabel.Text = ticket.TicketID.ToString();
+                    CurrTicket = ticket.TicketID;
                     priorityLabel.Text = ticket.TicketPriority.ToString();
                     statusLabel.Text = ticket.TicketStatus.ToString();
 
@@ -113,7 +115,7 @@ namespace Code_Hog {
             //if a ticket is selected, open the add note menu
             if (ticketIDLabel.Text != "..")
             {
-                Form m = new AddNote();
+                Form m = new AddNote(CurrTicket);
                 m.Show();
             } else
             {
