@@ -128,5 +128,19 @@ namespace Code_Hog {
         {
 
         }
+
+        private void EditPriorityButton_Click(object sender, EventArgs e)
+        {
+            //if a ticket is selected, open the changePriority menu
+            if (ticketIDLabel.Text == "..")
+            {
+                Form m = new ChangePriority(CurrTicket);
+                m.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select a Ticket before attempting to change the priority");
+            }
+        }
     }
 }

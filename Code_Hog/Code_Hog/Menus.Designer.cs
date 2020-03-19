@@ -70,6 +70,7 @@
             this.user_RolesTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.User_RolesTableAdapter();
             this.usersTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.UsersTableAdapter();
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.EditPriorityButton = new System.Windows.Forms.Button();
             this.menuTabControl.SuspendLayout();
             this.TicketsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).BeginInit();
@@ -95,6 +96,7 @@
             // 
             // TicketsPage
             // 
+            this.TicketsPage.Controls.Add(this.EditPriorityButton);
             this.TicketsPage.Controls.Add(this.label10);
             this.TicketsPage.Controls.Add(this.label1);
             this.TicketsPage.Controls.Add(this.statusLabel);
@@ -472,6 +474,16 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
+            // EditPriorityButton
+            // 
+            this.EditPriorityButton.Location = new System.Drawing.Point(1017, 77);
+            this.EditPriorityButton.Name = "EditPriorityButton";
+            this.EditPriorityButton.Size = new System.Drawing.Size(108, 33);
+            this.EditPriorityButton.TabIndex = 29;
+            this.EditPriorityButton.Text = "Change Priority";
+            this.EditPriorityButton.UseVisualStyleBackColor = true;
+            this.EditPriorityButton.Click += new System.EventHandler(this.EditPriorityButton_Click);
+            // 
             // Menus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -544,6 +556,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn TicketArchiveStatus;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button EditPriorityButton;
     }
 }
 

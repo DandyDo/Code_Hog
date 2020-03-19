@@ -67,6 +67,12 @@
     <Compile Include="AddNote.Designer.cs">
       <DependentUpon>AddNote.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangePriority.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePriority.Designer.cs">
+      <DependentUpon>ChangePriority.cs</DependentUpon>
+    </Compile>
     <Compile Include="CodeHogDataSet.cs">
       <DependentUpon>CodeHogDataSet.xsd</DependentUpon>
     </Compile>
@@ -145,6 +151,9 @@
     </Compile>
     <EmbeddedResource Include="AddNote.resx">
       <DependentUpon>AddNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePriority.resx">
+      <DependentUpon>ChangePriority.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateTicketMenu.resx">
       <DependentUpon>CreateTicketMenu.cs</DependentUpon>
