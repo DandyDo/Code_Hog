@@ -42,7 +42,7 @@ namespace Code_Hog {
 
         private void TicketDataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
 
-            int TicketId = Convert.ToInt32(ticketDataGridView[1, e.RowIndex].Value);
+            int TicketId = Convert.ToInt32(ticketDataGridView.Rows[e.RowIndex].Cells[0].Value);
             PrintTicketToLabelsAndTextBoxes(TicketId);
         }
 
