@@ -133,6 +133,12 @@
     <Compile Include="User.cs">
       <DependentUpon>CodeHogModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserManagementMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagementMenu.Designer.cs">
+      <DependentUpon>UserManagementMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="User_Roles.cs">
       <DependentUpon>CodeHogModel.tt</DependentUpon>
     </Compile>
