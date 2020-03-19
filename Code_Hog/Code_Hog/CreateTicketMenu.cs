@@ -66,18 +66,14 @@ namespace Code_Hog {
                 {
                     TicketArchiveStatus = false,
                     TicketStatus = 0,
-//                    Dependencies=DependID,
+                    TicketReporter = Reporter ,
 
-
-
-
-                    TicketDescription = TextDesc.Name,
+                    TicketDescription = TextDesc.Text,
                     TicketName = TextName.Text,
                     TicketPriority = Pri,
-                TicketReporter = Reporter 
                 };
-                Console.WriteLine("Ticket ID" + NewTicket.TicketID);
-
+                Database.Tickets.Add(NewTicket);
+                Database.SaveChanges();
                 // Dependcies checking
 
                 //Gettingt he piramary ticket ID
@@ -89,22 +85,20 @@ namespace Code_Hog {
                 foreach (DataGridViewRow temp in dataGridView1.SelectedRows)
                 {
 
-                    query = Database.Tickets.Where(s => s.TicketID == NewTicket.TicketID);
+                    int ticketidrow = Int32.Parse(temp.Cells[0].Value.ToString());
+                    query = Database.Tickets.Where(s => s.TicketID == ticketidrow );
                     Dependency dependency = new Dependency()
                     {
                         DependentTicketID = query.FirstOrDefault<Ticket>().TicketID,
                         TicketID=Ticketp.TicketID
                     };
+                    Console.WriteLine("OOps" + dependency.DependencyID + "\tFUCK" + dependency.TicketID);
                     Database.Dependencies.Add(dependency);
-                    Console.WriteLine(dependency.DependencyID + "\t" + Ticketp.TicketID);
+                    Database.SaveChanges();
 
                 }
                 //query = Database.Dependencies.Where(s => s.DependentTicketID == );
                 //NewTicket.Dependencies=
-
-
-                Database.Tickets.Add(NewTicket);
-                Database.SaveChanges();
                 dataGridView1.Refresh();
 
                 // This is the default values of a newly created ticket.
