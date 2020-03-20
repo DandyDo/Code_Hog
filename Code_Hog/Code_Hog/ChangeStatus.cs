@@ -99,12 +99,12 @@ namespace Code_Hog
 
                     }
 
-                    //Save changes to DB
-                    codeHogEntities.SaveChanges(); //TODO FIX Does noot work!!
-
                 }
 
             }
+
+            //Save changes to DB
+            codeHogEntities.SaveChanges(); //TODO FIX Does noot work!!
 
             //close the form
             this.Close();

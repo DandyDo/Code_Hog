@@ -152,11 +152,11 @@ namespace Code_Hog
                     //Update priority on the current ticket
                     ticket.TicketPriority = chosenPriority;
 
-                    //Save changes to DB
-                    codeHogEntities.SaveChanges(); //TODO FIX Does noot work!!
-
                 }
             }
+
+            //Save changes to DB
+            codeHogEntities.SaveChanges();
 
             //close the form
             this.Close();
