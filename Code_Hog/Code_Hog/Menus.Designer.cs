@@ -24,10 +24,9 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuTabControl = new System.Windows.Forms.TabControl();
             this.TicketsPage = new System.Windows.Forms.TabPage();
-            this.EditPriorityButton = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.statusLabel = new System.Windows.Forms.Label();
@@ -71,7 +70,6 @@
             this.user_RolesTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.User_RolesTableAdapter();
             this.usersTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.UsersTableAdapter();
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
-            this.StatusButton = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -91,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet)).BeginInit();
+            this.UserManagementPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1)).BeginInit();
@@ -111,8 +110,6 @@
             // 
             // TicketsPage
             // 
-            this.TicketsPage.Controls.Add(this.StatusButton);
-            this.TicketsPage.Controls.Add(this.EditPriorityButton);
             this.TicketsPage.Controls.Add(this.label10);
             this.TicketsPage.Controls.Add(this.label1);
             this.TicketsPage.Controls.Add(this.statusLabel);
@@ -145,16 +142,6 @@
             this.TicketsPage.TabIndex = 0;
             this.TicketsPage.Text = "Tickets";
             this.TicketsPage.UseVisualStyleBackColor = true;
-            // 
-            // EditPriorityButton
-            // 
-            this.EditPriorityButton.Location = new System.Drawing.Point(1028, 470);
-            this.EditPriorityButton.Name = "EditPriorityButton";
-            this.EditPriorityButton.Size = new System.Drawing.Size(108, 28);
-            this.EditPriorityButton.TabIndex = 29;
-            this.EditPriorityButton.Text = "Change Priority";
-            this.EditPriorityButton.UseVisualStyleBackColor = true;
-            this.EditPriorityButton.Click += new System.EventHandler(this.EditPriorityButton_Click);
             // 
             // label10
             // 
@@ -215,7 +202,7 @@
             // 
             // addNoteButton
             // 
-            this.addNoteButton.Location = new System.Drawing.Point(1142, 471);
+            this.addNoteButton.Location = new System.Drawing.Point(1143, 471);
             this.addNoteButton.Name = "addNoteButton";
             this.addNoteButton.Size = new System.Drawing.Size(84, 27);
             this.addNoteButton.TabIndex = 23;
@@ -357,7 +344,6 @@
             this.ticketDataGridView.Location = new System.Drawing.Point(10, 69);
             this.ticketDataGridView.Name = "ticketDataGridView";
             this.ticketDataGridView.ReadOnly = true;
-
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -449,6 +435,20 @@
             // 
             // UserManagementPage
             // 
+            this.UserManagementPage.Controls.Add(this.userListBox);
+            this.UserManagementPage.Controls.Add(this.clearUserFieldsButton);
+            this.UserManagementPage.Controls.Add(this.updateUserButton);
+            this.UserManagementPage.Controls.Add(this.deleteUserButton);
+            this.UserManagementPage.Controls.Add(this.addUserButton);
+            this.UserManagementPage.Controls.Add(this.roleNameTextBox);
+            this.UserManagementPage.Controls.Add(this.passwordTextBox);
+            this.UserManagementPage.Controls.Add(this.userNameTextBox);
+            this.UserManagementPage.Controls.Add(this.userIDTextBox);
+            this.UserManagementPage.Controls.Add(this.label12);
+            this.UserManagementPage.Controls.Add(this.label11);
+            this.UserManagementPage.Controls.Add(this.label13);
+            this.UserManagementPage.Controls.Add(this.label14);
+            this.UserManagementPage.Controls.Add(this.textBox1);
             this.UserManagementPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserManagementPage.Location = new System.Drawing.Point(4, 25);
             this.UserManagementPage.Name = "UserManagementPage";
@@ -500,15 +500,6 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // StatusButton
-            // 
-            this.StatusButton.Location = new System.Drawing.Point(916, 472);
-            this.StatusButton.Name = "StatusButton";
-            this.StatusButton.Size = new System.Drawing.Size(106, 26);
-            this.StatusButton.TabIndex = 30;
-            this.StatusButton.Text = "Change Status";
-            this.StatusButton.UseVisualStyleBackColor = true;
-            this.StatusButton.Click += new System.EventHandler(this.StatusButton_Click);
             // label14
             // 
             this.label14.AutoSize = true;
@@ -647,6 +638,7 @@
             this.Controls.Add(this.menuTabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Menus";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Code Hog";
             this.Load += new System.EventHandler(this.Menus_Load);
             this.menuTabControl.ResumeLayout(false);
@@ -655,6 +647,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet)).EndInit();
+            this.UserManagementPage.ResumeLayout(false);
+            this.UserManagementPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.codeHogDataSet1)).EndInit();
@@ -711,8 +705,20 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn TicketArchiveStatus;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button EditPriorityButton;
-        private System.Windows.Forms.Button StatusButton;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button clearUserFieldsButton;
+        private System.Windows.Forms.Button updateUserButton;
+        private System.Windows.Forms.Button deleteUserButton;
+        private System.Windows.Forms.Button addUserButton;
+        private System.Windows.Forms.TextBox roleNameTextBox;
+        private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.TextBox userNameTextBox;
+        private System.Windows.Forms.TextBox userIDTextBox;
+        private System.Windows.Forms.ListBox userListBox;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
