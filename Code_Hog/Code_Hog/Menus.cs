@@ -41,7 +41,7 @@ namespace Code_Hog {
 
         private void TicketDataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
 
-            int TicketId = Convert.ToInt32(ticketDataGridView[1, e.RowIndex]);
+            int TicketId = Convert.ToInt32(ticketDataGridView.Rows[e.RowIndex].Cells[0].Value);
             PrintTicketToLabelsAndTextBoxes(TicketId);
         }
 
@@ -103,11 +103,6 @@ namespace Code_Hog {
 
         }
 
-        private void EditTicketButton_Click(object sender, EventArgs e) {
-
-            EditTicketMenu editTicketMenu = new EditTicketMenu();
-            editTicketMenu.ShowDialog();
-        }
 
         private void AddNoteButton_Click(object sender, EventArgs e) {
 
@@ -137,6 +132,17 @@ namespace Code_Hog {
 
         private void userListBox_SelectedIndexChanged(object sender, EventArgs e) {
 
+        }
+
+        private void EditTicketButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteTicketButton_Click(object sender, EventArgs e)
+        {
+            DeleteTicketMenu deleteTicket = new DeleteTicketMenu(ticketIDLabel.Text);
+            deleteTicket.ShowDialog();
         }
     }
 }

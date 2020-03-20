@@ -8,35 +8,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Code_Hog {
+namespace Code_Hog{
     public partial class DeleteTicketMenu : Form
     {
 
         CodeHogEntities codeHogEntities;
-        public DeleteTicketMenu()
+        public DeleteTicketMenu(string ticketID)
         {
             InitializeComponent();
             codeHogEntities = new CodeHogEntities();
-            //ticketIDLabel.Text = 
+            ticketIDLabel.Text = ticketID;
         }
-
+        
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Close();
         }
 
         private void DeleteTicketButton_Click(object sender, EventArgs e)
-        {
+        {       
             int TicketId = Convert.ToInt32(ticketIDLabel.Text);
             foreach (var ticket in codeHogEntities.Tickets)
             {
                 if (ticket.TicketID == TicketId)
                 {
                     codeHogEntities.Tickets.Remove(ticket);
-                    codeHogEntities.SaveChanges();
-                    Close();
                 }
             }
+            codeHogEntities.SaveChanges();
+            Close();
         }
     }
 }

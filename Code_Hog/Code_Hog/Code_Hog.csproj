@@ -104,12 +104,6 @@
     <Compile Include="CreateTicketMenu.Designer.cs">
       <DependentUpon>CreateTicketMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditTicketMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditTicketMenu.Designer.cs">
-      <DependentUpon>EditTicketMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,9 +144,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteTicketMenu.resx">
       <DependentUpon>DeleteTicketMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditTicketMenu.resx">
-      <DependentUpon>EditTicketMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
