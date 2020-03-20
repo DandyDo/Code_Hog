@@ -43,6 +43,7 @@ namespace Code_Hog {
 
             int TicketId = Convert.ToInt32(ticketDataGridView.Rows[e.RowIndex].Cells[0].Value);
             PrintTicketToLabelsAndTextBoxes(TicketId);
+            deleteTicketButton.Enabled = true;
         }
 
         private void PrintTicketToLabelsAndTextBoxes(int TicketId) {
@@ -142,7 +143,12 @@ namespace Code_Hog {
         private void deleteTicketButton_Click(object sender, EventArgs e)
         {
             DeleteTicketMenu deleteTicket = new DeleteTicketMenu(ticketIDLabel.Text);
+            deleteTicket.FormClosing += DeleteTicketMenu_FormClosed;
             deleteTicket.ShowDialog();
+        }
+        void DeleteTicketMenu_FormClosed(object sender, FormClosingEventArgs e)
+        {
+            deleteTicketButton.Enabled = false; //disable button once delete is confirmed
         }
     }
 }

@@ -11,13 +11,12 @@ using System.Windows.Forms;
 namespace Code_Hog{
     public partial class DeleteTicketMenu : Form
     {
-
         CodeHogEntities codeHogEntities;
         public DeleteTicketMenu(string ticketID)
         {
             InitializeComponent();
             codeHogEntities = new CodeHogEntities();
-            ticketIDLabel.Text = ticketID;
+            ticketIDLabel.Text = ticketID;           
         }
         
         private void CancelButton_Click(object sender, EventArgs e)
@@ -25,14 +24,14 @@ namespace Code_Hog{
             Close();
         }
 
-        private void DeleteTicketButton_Click(object sender, EventArgs e)
-        {       
+        private void confirmDeletion_Click(object sender, EventArgs e)
+        {
             int TicketId = Convert.ToInt32(ticketIDLabel.Text);
             foreach (var ticket in codeHogEntities.Tickets)
             {
                 if (ticket.TicketID == TicketId)
                 {
-                    codeHogEntities.Tickets.Remove(ticket);
+                    codeHogEntities.Tickets.Remove(ticket);                    
                 }
             }
             codeHogEntities.SaveChanges();

@@ -27,8 +27,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ticketIDLabel = new System.Windows.Forms.Label();
-            this.deleteTicketButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.confirmDeletion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -67,16 +67,6 @@
             this.ticketIDLabel.TabIndex = 47;
             this.ticketIDLabel.Text = "..";
             // 
-            // deleteTicketButton
-            // 
-            this.deleteTicketButton.Location = new System.Drawing.Point(155, 68);
-            this.deleteTicketButton.Name = "deleteTicketButton";
-            this.deleteTicketButton.Size = new System.Drawing.Size(75, 23);
-            this.deleteTicketButton.TabIndex = 49;
-            this.deleteTicketButton.Text = "Delete";
-            this.deleteTicketButton.UseVisualStyleBackColor = true;
-            this.deleteTicketButton.Click += new System.EventHandler(this.DeleteTicketButton_Click);
-            // 
             // cancelButton
             // 
             this.cancelButton.Location = new System.Drawing.Point(245, 68);
@@ -87,12 +77,22 @@
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
+            // confirmDeletion
+            // 
+            this.confirmDeletion.Location = new System.Drawing.Point(164, 68);
+            this.confirmDeletion.Name = "confirmDeletion";
+            this.confirmDeletion.Size = new System.Drawing.Size(75, 23);
+            this.confirmDeletion.TabIndex = 50;
+            this.confirmDeletion.Text = "Delete";
+            this.confirmDeletion.UseVisualStyleBackColor = true;
+            this.confirmDeletion.Click += new System.EventHandler(this.confirmDeletion_Click);
+            // 
             // DeleteTicketMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(332, 103);
-            this.Controls.Add(this.deleteTicketButton);
+            this.Controls.Add(this.confirmDeletion);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.ticketIDLabel);
             this.Controls.Add(this.label3);
@@ -112,7 +112,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label ticketIDLabel;
-        private System.Windows.Forms.Button deleteTicketButton;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Button confirmDeletion;
     }
 }
