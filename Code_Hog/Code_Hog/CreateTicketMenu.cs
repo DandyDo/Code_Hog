@@ -30,6 +30,7 @@ namespace Code_Hog {
         {
 
         }
+
         private void ButtonNewTicket_Click(object sender, EventArgs e)
         {
             //Prioerity Checking
