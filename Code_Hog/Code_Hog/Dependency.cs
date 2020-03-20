@@ -11,9 +11,13 @@ namespace Code_Hog
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class Dependency
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Key]
         public int DependencyID { get; set; }
         public int TicketID { get; set; }
         public int DependentTicketID { get; set; }

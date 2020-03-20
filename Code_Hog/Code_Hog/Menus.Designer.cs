@@ -84,6 +84,7 @@
             this.clearUserFieldsButton = new System.Windows.Forms.Button();
             this.userListBox = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.StatusButton = new System.Windows.Forms.Button();
             this.menuTabControl.SuspendLayout();
             this.TicketsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).BeginInit();
@@ -355,6 +356,7 @@
             this.ticketDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.ticketDataGridView.Size = new System.Drawing.Size(640, 612);
             this.ticketDataGridView.TabIndex = 5;
+            this.ticketDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ticketDataGridView_CellContentClick);
             this.ticketDataGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TicketDataGridView_RowHeaderMouseClick);
             // 
             // ticketIDDataGridViewTextBoxColumn
@@ -578,7 +580,6 @@
             this.addUserButton.TabIndex = 9;
             this.addUserButton.Text = "Add User";
             this.addUserButton.UseVisualStyleBackColor = false;
-            this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
             // 
             // deleteUserButton
             // 
@@ -629,6 +630,15 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(429, 296);
             this.textBox1.TabIndex = 14;
+            // StatusButton
+            // 
+            this.StatusButton.Location = new System.Drawing.Point(916, 472);
+            this.StatusButton.Name = "StatusButton";
+            this.StatusButton.Size = new System.Drawing.Size(106, 26);
+            this.StatusButton.TabIndex = 30;
+            this.StatusButton.Text = "Change Status";
+            this.StatusButton.UseVisualStyleBackColor = true;
+            this.StatusButton.Click += new System.EventHandler(this.StatusButton_Click);
             // 
             // Menus
             // 
