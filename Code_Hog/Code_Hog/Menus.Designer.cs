@@ -24,9 +24,10 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuTabControl = new System.Windows.Forms.TabControl();
             this.TicketsPage = new System.Windows.Forms.TabPage();
+            this.EditPriorityButton = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.statusLabel = new System.Windows.Forms.Label();
@@ -70,7 +71,7 @@
             this.user_RolesTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.User_RolesTableAdapter();
             this.usersTableAdapter = new Code_Hog.CodeHogDataSet1TableAdapters.UsersTableAdapter();
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
-            this.EditPriorityButton = new System.Windows.Forms.Button();
+            this.StatusButton = new System.Windows.Forms.Button();
             this.menuTabControl.SuspendLayout();
             this.TicketsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).BeginInit();
@@ -96,6 +97,7 @@
             // 
             // TicketsPage
             // 
+            this.TicketsPage.Controls.Add(this.StatusButton);
             this.TicketsPage.Controls.Add(this.EditPriorityButton);
             this.TicketsPage.Controls.Add(this.label10);
             this.TicketsPage.Controls.Add(this.label1);
@@ -129,6 +131,16 @@
             this.TicketsPage.TabIndex = 0;
             this.TicketsPage.Text = "Tickets";
             this.TicketsPage.UseVisualStyleBackColor = true;
+            // 
+            // EditPriorityButton
+            // 
+            this.EditPriorityButton.Location = new System.Drawing.Point(1028, 470);
+            this.EditPriorityButton.Name = "EditPriorityButton";
+            this.EditPriorityButton.Size = new System.Drawing.Size(108, 28);
+            this.EditPriorityButton.TabIndex = 29;
+            this.EditPriorityButton.Text = "Change Priority";
+            this.EditPriorityButton.UseVisualStyleBackColor = true;
+            this.EditPriorityButton.Click += new System.EventHandler(this.EditPriorityButton_Click);
             // 
             // label10
             // 
@@ -331,14 +343,14 @@
             this.ticketDataGridView.Location = new System.Drawing.Point(10, 69);
             this.ticketDataGridView.Name = "ticketDataGridView";
             this.ticketDataGridView.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ticketDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ticketDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.ticketDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.ticketDataGridView.Size = new System.Drawing.Size(640, 612);
             this.ticketDataGridView.TabIndex = 5;
@@ -474,15 +486,15 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // EditPriorityButton
+            // StatusButton
             // 
-            this.EditPriorityButton.Location = new System.Drawing.Point(1028, 470);
-            this.EditPriorityButton.Name = "EditPriorityButton";
-            this.EditPriorityButton.Size = new System.Drawing.Size(108, 28);
-            this.EditPriorityButton.TabIndex = 29;
-            this.EditPriorityButton.Text = "Change Priority";
-            this.EditPriorityButton.UseVisualStyleBackColor = true;
-            this.EditPriorityButton.Click += new System.EventHandler(this.EditPriorityButton_Click);
+            this.StatusButton.Location = new System.Drawing.Point(916, 472);
+            this.StatusButton.Name = "StatusButton";
+            this.StatusButton.Size = new System.Drawing.Size(106, 26);
+            this.StatusButton.TabIndex = 30;
+            this.StatusButton.Text = "Change Status";
+            this.StatusButton.UseVisualStyleBackColor = true;
+            this.StatusButton.Click += new System.EventHandler(this.StatusButton_Click);
             // 
             // Menus
             // 
@@ -557,6 +569,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button EditPriorityButton;
+        private System.Windows.Forms.Button StatusButton;
     }
 }
 

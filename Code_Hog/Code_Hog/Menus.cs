@@ -142,5 +142,20 @@ namespace Code_Hog {
                 MessageBox.Show("Please select a Ticket before attempting to change the priority");
             }
         }
+
+        private void StatusButton_Click(object sender, EventArgs e)
+        {
+            //if a ticket is selected, open the changePriority menu
+            if (ticketIDLabel.Text != "..")
+            {
+                Form m = new ChangeStatus(CurrTicket);
+                m.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select a Ticket before attempting to change the status");
+            }
+
+        }
     }
 }

@@ -73,6 +73,12 @@
     <Compile Include="ChangePriority.Designer.cs">
       <DependentUpon>ChangePriority.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangeStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeStatus.Designer.cs">
+      <DependentUpon>ChangeStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="CodeHogDataSet.cs">
       <DependentUpon>CodeHogDataSet.xsd</DependentUpon>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePriority.resx">
       <DependentUpon>ChangePriority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeStatus.resx">
+      <DependentUpon>ChangeStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateTicketMenu.resx">
       <DependentUpon>CreateTicketMenu.cs</DependentUpon>
