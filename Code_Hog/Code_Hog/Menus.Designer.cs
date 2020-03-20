@@ -84,7 +84,6 @@
             this.clearUserFieldsButton = new System.Windows.Forms.Button();
             this.userListBox = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.StatusButton = new System.Windows.Forms.Button();
             this.menuTabControl.SuspendLayout();
             this.TicketsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).BeginInit();
