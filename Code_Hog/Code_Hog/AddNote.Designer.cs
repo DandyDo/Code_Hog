@@ -58,7 +58,7 @@
             // userTitleLabel
             // 
             this.userTitleLabel.AutoSize = true;
-            this.userTitleLabel.Location = new System.Drawing.Point(12, 26);
+            this.userTitleLabel.Location = new System.Drawing.Point(15, 26);
             this.userTitleLabel.Name = "userTitleLabel";
             this.userTitleLabel.Size = new System.Drawing.Size(58, 13);
             this.userTitleLabel.TabIndex = 2;
@@ -115,9 +115,7 @@
             this.Controls.Add(this.userTitleLabel);
             this.Controls.Add(this.ticketNumPrintLabel);
             this.Controls.Add(this.ticketNumberLabel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "AddNote";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddNote";
             this.ResumeLayout(false);
             this.PerformLayout();

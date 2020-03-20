@@ -13,6 +13,7 @@ namespace Code_Hog {
 
         CodeHogEntities codeHogEntities;
         public bool CurrentSort { get; private set; }
+        public int CurrTicket;
 
         enum ChosenSort {
 
@@ -41,7 +42,7 @@ namespace Code_Hog {
 
         private void TicketDataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
 
-            int TicketId = Convert.ToInt32(ticketDataGridView[1, e.RowIndex]);
+            int TicketId = Convert.ToInt32(ticketDataGridView.Rows[e.RowIndex].Cells[0].Value);
             PrintTicketToLabelsAndTextBoxes(TicketId);
         }
 
@@ -52,6 +53,7 @@ namespace Code_Hog {
                 if (ticket.TicketID == TicketId) {
 
                     ticketIDLabel.Text = ticket.TicketID.ToString();
+                    CurrTicket = ticket.TicketID;
                     priorityLabel.Text = ticket.TicketPriority.ToString();
                     statusLabel.Text = ticket.TicketStatus.ToString();
 
@@ -105,16 +107,13 @@ namespace Code_Hog {
 
         private void EditTicketButton_Click(object sender, EventArgs e) {
 
-            EditTicketMenu editTicketMenu = new EditTicketMenu();
-            editTicketMenu.ShowDialog();
         }
 
         private void AddNoteButton_Click(object sender, EventArgs e) {
-
             //if a ticket is selected, open the add note menu
             if (ticketIDLabel.Text != "..")
             {
-                Form m = new AddNote();
+                Form m = new AddNote(CurrTicket);
                 m.Show();
             } else
             {
@@ -127,14 +126,34 @@ namespace Code_Hog {
 
         }
 
-        private void updateUserButton_Click(object sender, EventArgs e) {
-
+        private void EditPriorityButton_Click(object sender, EventArgs e)
+        {
+            //if a ticket is selected, open the changePriority menu
+            if (ticketIDLabel.Text != "..")
+            {
+                Form m = new ChangePriority(CurrTicket);
+                m.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select a Ticket before attempting to change the priority");
+            }
         }
 
-        private void deleteUserButton_Click(object sender, EventArgs e) {
+        private void StatusButton_Click(object sender, EventArgs e)
+        {
+            //if a ticket is selected, open the changePriority menu
+            if (ticketIDLabel.Text != "..")
+            {
+                Form m = new ChangeStatus(CurrTicket);
+                m.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select a Ticket before attempting to change the status");
+            }
 
         }
-
         private void userListBox_SelectedIndexChanged(object sender, EventArgs e) {
 
         }

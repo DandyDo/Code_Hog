@@ -64,6 +64,21 @@
     <Compile Include="AddNote.Designer.cs">
       <DependentUpon>AddNote.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangePriority.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePriority.Designer.cs">
+      <DependentUpon>ChangePriority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeStatus.Designer.cs">
+      <DependentUpon>ChangeStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodeHogDataSet.cs">
+      <DependentUpon>CodeHogDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CodeHogDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -145,14 +160,14 @@
     <EmbeddedResource Include="AddNote.resx">
       <DependentUpon>AddNote.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangePriority.resx">
+      <DependentUpon>ChangePriority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeStatus.resx">
+      <DependentUpon>ChangeStatus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateTicketMenu.resx">
       <DependentUpon>CreateTicketMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeleteTicketMenu.resx">
-      <DependentUpon>DeleteTicketMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditTicketMenu.resx">
-      <DependentUpon>EditTicketMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
