@@ -106,7 +106,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "1";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
             // 
             // radioButton2
             // 
@@ -118,7 +118,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "2";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.radioButton2.Click += new System.EventHandler(this.radioButton2_Click);
             // 
             // radioButton3
             // 
@@ -130,7 +130,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "3";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.radioButton3.Click += new System.EventHandler(this.radioButton3_Click);
             // 
             // radioButton4
             // 
@@ -142,7 +142,7 @@
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "4";
             this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.radioButton4.Click += new System.EventHandler(this.radioButton4_Click);
             // 
             // radioButton5
             // 
@@ -154,7 +154,7 @@
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "5";
             this.radioButton5.UseVisualStyleBackColor = true;
-            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
+            this.radioButton5.Click += new System.EventHandler(this.radioButton5_Click);
             // 
             // ChangePriority
             // 

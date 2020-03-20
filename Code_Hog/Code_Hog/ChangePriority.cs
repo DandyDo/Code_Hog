@@ -64,57 +64,6 @@ namespace Code_Hog
 
         }
 
-        //radio button handling. If one is pressed, the others are not
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-                chosenPriority = 1;
-                radioButton2.Checked = false;
-                radioButton3.Checked = false;
-                radioButton4.Checked = false;
-                radioButton5.Checked = false;
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-                chosenPriority = 2;
-                radioButton1.Checked = false;
-                radioButton3.Checked = false;
-                radioButton4.Checked = false;
-                radioButton5.Checked = false;
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-                chosenPriority = 3;
-                radioButton2.Checked = false;
-                radioButton1.Checked = false;
-                radioButton4.Checked = false;
-                radioButton5.Checked = false;
-
-        }
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-                chosenPriority = 4;
-                radioButton2.Checked = false;
-                radioButton3.Checked = false;
-                radioButton1.Checked = false;
-                radioButton5.Checked = false;
-
-        }
-
-        private void radioButton5_CheckedChanged(object sender, EventArgs e)
-        {
-                chosenPriority = 5;
-                radioButton2.Checked = false;
-                radioButton3.Checked = false;
-                radioButton4.Checked = false;
-                radioButton1.Checked = false;
-
-        }
-
         private void ChangeButton_Click(object sender, EventArgs e)
         {
             //update the ticket entry with the new priority
@@ -137,6 +86,60 @@ namespace Code_Hog
 
         }
 
+        //radio button handling. If one is pressed, the others are not
+        private void radioButton1_Click(object sender, EventArgs e)
+        {
+            chosenPriority = 1;
+            radioButton1.Checked = true;
+            radioButton2.Checked = false;
+            radioButton3.Checked = false;
+            radioButton4.Checked = false;
+            radioButton5.Checked = false;
+
+        }
+
+        private void radioButton2_Click(object sender, EventArgs e)
+        {
+            chosenPriority = 2;
+            radioButton1.Checked = false;
+            radioButton2.Checked = true;
+            radioButton3.Checked = false;
+            radioButton4.Checked = false;
+            radioButton5.Checked = false;
+
+        }
+
+        private void radioButton3_Click(object sender, EventArgs e)
+        {
+            chosenPriority = 3;
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            radioButton3.Checked = true;
+            radioButton4.Checked = false;
+            radioButton5.Checked = false;
+        }
+
+        private void radioButton4_Click(object sender, EventArgs e)
+        {
+            chosenPriority = 4;
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            radioButton3.Checked = false;
+            radioButton4.Checked = true;
+            radioButton5.Checked = false;
+
+        }
+
+        private void radioButton5_Click(object sender, EventArgs e)
+        {
+            chosenPriority = 5;
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            radioButton3.Checked = false;
+            radioButton4.Checked = false;
+            radioButton5.Checked = true;
+
+        }
     }
 
 }
