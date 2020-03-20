@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\fru\Source\Repos\Code_Hog2\Code_Hog\Code_Hog\CodeHogModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\omuna\Documents\GitHub\Code_Hog\Code_Hog\Code_Hog\CodeHogModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
