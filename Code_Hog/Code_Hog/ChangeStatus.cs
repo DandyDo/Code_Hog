@@ -88,6 +88,17 @@ namespace Code_Hog
                     //set status to choice
                     ticket.TicketStatus = choice;
 
+                    //set archive status
+                    if (choice < 3)
+                    {
+                        ticket.TicketArchiveStatus = false;
+
+                    } else
+                    {
+                        ticket.TicketArchiveStatus = true;
+
+                    }
+
                     //Save changes to DB
                     codeHogEntities.SaveChanges(); //TODO FIX Does noot work!!
 
