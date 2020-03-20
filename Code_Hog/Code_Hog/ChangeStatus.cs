@@ -104,7 +104,7 @@ namespace Code_Hog
             }
 
             //Save changes to DB
-            codeHogEntities.SaveChanges(); //TODO FIX Does noot work!!
+            codeHogEntities.SaveChanges();
 
             //close the form
             this.Close();

@@ -157,5 +157,12 @@ namespace Code_Hog {
             }
 
         }
+
+        public void RefreshDataGrid()
+        {
+
+
+        }
+
     }
 }

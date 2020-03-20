@@ -67,77 +67,51 @@ namespace Code_Hog
         //radio button handling. If one is pressed, the others are not
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
-            if (!Lock)
-            {
                 chosenPriority = 1;
                 radioButton2.Checked = false;
                 radioButton3.Checked = false;
                 radioButton4.Checked = false;
                 radioButton5.Checked = false;
-                Lock = true;
-
-            }
 
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if (!Lock)
-            {
                 chosenPriority = 2;
                 radioButton1.Checked = false;
                 radioButton3.Checked = false;
                 radioButton4.Checked = false;
                 radioButton5.Checked = false;
-                Lock = true;
-
-            }
 
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            if (!Lock)
-            {
                 chosenPriority = 3;
                 radioButton2.Checked = false;
                 radioButton1.Checked = false;
                 radioButton4.Checked = false;
                 radioButton5.Checked = false;
-                Lock = true;
-
-            }
 
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            if (!Lock)
-            {
                 chosenPriority = 4;
                 radioButton2.Checked = false;
                 radioButton3.Checked = false;
                 radioButton1.Checked = false;
                 radioButton5.Checked = false;
-                Lock = true;
-
-            }
 
         }
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
-            if (!Lock)
-            {
                 chosenPriority = 5;
                 radioButton2.Checked = false;
                 radioButton3.Checked = false;
                 radioButton4.Checked = false;
                 radioButton1.Checked = false;
-                Lock = true;
-
-            }
 
         }
 
@@ -156,7 +130,7 @@ namespace Code_Hog
             }
 
             //Save changes to DB
-            codeHogEntities.SaveChanges();
+            codeHogEntities.SaveChanges(); //TODO FIX
 
             //close the form
             this.Close();
